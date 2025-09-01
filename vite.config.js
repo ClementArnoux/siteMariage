@@ -1,7 +1,10 @@
-import { defineConfig } from 'vite'
+import { defineConfig, loadEnv } from 'vite'
 import { resolve } from 'path'
 
-export default defineConfig({
+export default ({ mode }) => {
+  const env = loadEnv(mode, process.cwd(), '')
+  return defineConfig({
+    base: env.BASE_URL || 'http://localhost:3000',
   css: {
     preprocessorOptions: {
       scss: {
@@ -25,3 +28,4 @@ export default defineConfig({
   },
   appType: 'mpa' // Multi-page application
 })
+}

@@ -105,19 +105,44 @@ async function changeLanguage(lang) {
 }
 
 // Gestion des formulaires RSVP
-function handleRSVPForm(event) {
+async function handleRSVPForm(event) {
   event.preventDefault();
   
-  const formData = new FormData(event.target);
-  const data = Object.fromEntries(formData.entries());
+  const form = event.target;
+  const submitBtn = form.querySelector('.rsvp__submit');
+  const originalText = submitBtn.textContent;
   
-  // Ajouter la langue aux données
-  data.language = currentLanguage;
+  // Désactiver le bouton pendant l'envoi
+  submitBtn.disabled = true;
+  submitBtn.textContent = t('rsvp.sending') || 'Envoi en cours...';
   
-  // Message de succès traduit
-  alert(t('rsvp.success'));
-  
-  console.log('RSVP Data:', data);
+  try {
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+    data.language = currentLanguage;
+    
+    // Envoyer via Google Apps Script
+    const response = await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      headers: { 
+        'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' 
+      },
+      body: new URLSearchParams(data)
+    });
+    
+    if (!response.ok) throw new Error('Erreur réseau');
+    
+    // Succès
+    alert(t('rsvp.success') || 'Merci ! Votre RSVP a été envoyé.');
+    form.reset();
+    
+  } catch (error) {
+    console.error('Erreur:', error);
+    alert(t('rsvp.error') || 'Erreur lors de l\'envoi. Veuillez réessayer.');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = originalText;
+  }
 }
 
 // Fonctionnalités interactives
@@ -196,7 +221,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   addInteractivity();
   
   // Gérer les formulaires RSVP
-  const rsvpForms = document.querySelectorAll('.rsvp-form');
+  const rsvpForms = document.querySelectorAll('.rsvp__form');
   rsvpForms.forEach(form => {
     form.addEventListener('submit', handleRSVPForm);
   });

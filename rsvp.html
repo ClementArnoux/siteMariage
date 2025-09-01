@@ -5,6 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>RSVP - Paula & Pierre</title>
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
+  <style>
+    /* CSS critique pour éviter FOUC */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Inter', Arial, sans-serif; 
+      font-weight: 300; 
+      line-height: 1.7; 
+      color: black; 
+      background-color: rgb(223, 224, 225);
+      visibility: hidden;
+    }
+    body.loaded { visibility: visible; }
+    .header { 
+      background: transparent; 
+      padding: 32px 0; 
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      right: 0; 
+      z-index: 1000; 
+    }
+  </style>
+  <script>
+    window.addEventListener('load', () => {
+      document.body.classList.add('loaded');
+    });
+  </script>
 </head>
 <body>
   <header class="header">
@@ -32,6 +59,7 @@
     <section class="rsvp">
       <div class="rsvp__container">
         <form class="rsvp__form">
+          
           <div class="form-field">
             <label for="firstName" class="form-field__label" data-i18n="rsvp.fields.firstName">Prénom :</label>
             <input type="text" id="firstName" name="firstName" class="form-field__input" required>

@@ -3,7 +3,6 @@
 
 // Variables
 :root {
-  --accent-color: #a8998a;
   --border-color: #e8e6e3;
   --font-serif: 'Cormorant Garamond', Georgia, serif;
   --font-sans: 'Inter', Arial, sans-serif;
@@ -174,23 +173,23 @@ body::before {
   
   // Accommodation page hero
   &.hero--accommodation {
-    background-image: url('/Accueil1bw.jpeg');
+    background-image: url('/Accueil3d.jpeg');
   }
   
   // Gifts page hero
   &.hero--gifts {
-    background-image: url('/Accueil1.jpeg');
+    background-image: url('/Accueil422.png');
   }
   
   // RSVP page hero
   &.hero--rsvp {
-    background-image: url('/Accueil1norm.jpeg');
+    background-image: url('/Accueil1bw.jpeg');
   }
 }
 
 // Buttons
 .btn {
-  background: var(--accent-color);
+  background: black;
   color: white;
   border: none;
   padding: 16px 40px;
@@ -226,7 +225,7 @@ body::before {
   transition: all 0.3s ease;
   
   &:hover {
-    background: var(--accent-color);
+    background: black;
     transform: translateY(-1px);
   }
 }
@@ -248,7 +247,7 @@ body::before {
   line-height: 1.7;
   
   &:hover {
-    background: var(--accent-color);
+    background: black;
     color: white;
     transform: translateY(-1px);
   }
@@ -305,7 +304,7 @@ body::before {
       input[type="radio"] {
         width: auto;
         margin: 0;
-        accent-color: var(--accent-color);
+        accent-color: black;
       }
     }
   }
@@ -334,7 +333,7 @@ body::before {
   background: rgba(255, 255, 255, 0.8);
   padding: 32px;
   margin-bottom: 32px;
-  border-left: 3px solid var(--accent-color);
+  border-left: 3px solid black;
   transition: all 0.3s ease;
   
   &:hover {
