@@ -1,4 +1,3 @@
-import './styles/main.scss'
 import i18n from './i18n.js'
 
 // Import page-specific styles based on current page

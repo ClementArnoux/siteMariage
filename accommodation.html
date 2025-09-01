@@ -5,33 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Se loger - Paula & Pierre</title>
   <link rel="icon" type="image/svg+xml" href="/vite.svg">
-  <style>
-    /* CSS critique pour éviter FOUC */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { 
-      font-family: 'Inter', Arial, sans-serif; 
-      font-weight: 300; 
-      line-height: 1.7; 
-      color: black; 
-      background-color: rgb(223, 224, 225);
-      visibility: hidden;
-    }
-    body.loaded { visibility: visible; }
-    .header { 
-      background: transparent; 
-      padding: 32px 0; 
-      position: fixed; 
-      top: 0; 
-      left: 0; 
-      right: 0; 
-      z-index: 1000; 
-    }
-  </style>
-  <script>
-    window.addEventListener('load', () => {
-      document.body.classList.add('loaded');
-    });
-  </script>
+  <link rel="preload" href="/Accueil3d.jpeg" as="image">
+  <link rel="preload" href="/src/styles/main.scss" as="style">
+  <link rel="preload" href="/src/styles/accommodation.scss" as="style">
+  <link rel="stylesheet" href="/src/styles/main.scss">
+  <link rel="stylesheet" href="/src/styles/accommodation.scss">
 </head>
 <body>
   <header class="header">
@@ -40,7 +18,7 @@
         <a href="/" class="header__link" data-i18n="nav.home">Accueil</a>
         <a href="/accommodation" class="header__link header__link--active" data-i18n="nav.accommodation">Se loger</a>
         <a href="/gifts" class="header__link" data-i18n="nav.gifts">Cadeaux</a>
-        <a href="/rsvp" class="btn-rsvp" data-i18n="nav.rsvp">RSVP</a>
+        <a href="/rsvp" class="header__link" data-i18n="nav.rsvp">RSVP</a>
       </nav>
       
       <div class="header__language">
