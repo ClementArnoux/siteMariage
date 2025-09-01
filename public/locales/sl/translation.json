@@ -1,0 +1,94 @@
+{
+  "nav": {
+    "home": "Domov",
+    "accommodation": "Nastanitve",
+    "gifts": "Darila",
+    "faq": "Pogosta vprašanja",
+    "rsvp": "RSVP"
+  },
+  "home": {
+    "title": "Paula & Pierre",
+    "date": "2. maj 2026",
+    "ceremony": {
+      "title": "Sv. maša",
+      "time": "ob 14. uri",
+      "location": "v cerkvi Saint-Étienne du Mont",
+      "address": "Place Sainte-Geneviève<br>75005 Pariz, Francija",
+      "map": "Zemljevid"
+    },
+    "reception": {
+      "title": "Koktajl in večeria",
+      "time": "od 17. ure dalje",
+      "location": "Opatija Cercanceaux",
+      "address": "Rue Antoine Héroët<br>77460 Souppes-sur-Loing, Francija",
+      "map": "Zemljevid",
+      "transport": {
+        "car": "Z avtom: 1 ura vožnje iz Pariza po avtocesti A6 in A77",
+        "train": "Z vlakom: postaja « Souppes-sur-Loing » z linijo R iz železniške postaje Gare de Lyon v Parizu"
+      }
+    },
+    "accommodation_cta": {
+      "title": "Nastanitve v bližini opatije s sobote na nedeljo",
+      "button": "Lokacije"
+    },
+    "closing": {
+      "title": "Veseliva se vašega prihoda",
+      "button": "RSVP"
+    }
+  },
+  "accommodation": {
+    "title": "Nastanitve",
+    "subtitle": "Nastanitve v bližini opatije s sobote na nedeljo",
+    "paris_info": "Nastanitve v Parizu s petka na soboto: za uskladitev in pomoč pri urejanju nastanitev v Parizu kontaktirajte Pauli (paula.c.qualizza@gmail.com / +386 31 448 288).",
+    "breakfast": "Neformalni zajtrk je predviden za nedeljo, 3. maja, zjutraj do poldneva na naslovu 12 rue de la Vallée aux Chats, 77620 Bransles",
+    "sections": {
+      "guesthouses": "Sobe za goste",
+      "hotels": "Hoteli",
+      "cottages": "Apartmaji"
+    },
+    "items": {
+      "hotel_warning": "Pozor: ne gre za opatijo Cercanceaux, kjer bo potekalo slavje",
+      "four_stars": "Hotel 4 zvezdice"
+    }
+  },
+  "gifts": {
+    "title": "Darila",
+    "message": "Mnogi prihajate od daleč, da bi se udeležili najine poroke, zato nama vaša prisotnost popolnoma zadostuje. V kolikor pa bi kljub temu želeli darovati, bo na dan poroke možno oddati prispevek za najino poročno potovanje, ali prek te povezave :",
+    "button": "Prispevaj za poročno potovanje"
+  },
+  "faq": {
+    "title": "Pogosta vprašanja",
+    "coming_soon": "Vsebina bo kmalu na voljo..."
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Potrdite svojo udeležbo preko spodnjega obrazca.",
+    "fields": {
+      "firstName": "Ime:",
+      "lastName": "Priimek:",
+      "email": "Elektronski naslov:",
+      "phone": "Telefon:",
+      "ceremony_attendance": "Udeležil/a se bom sv. maše v Parizu:",
+      "reception_attendance": "Udeležil/a se bom slavja v Opatiji Cercanceaux:",
+      "guest_count": "Število oseb:",
+      "adults": "odraslih",
+      "children": "otrok",
+      "guest_names": "Polna imena odraslih in otrok:",
+      "allergies": "Morebitne alergije oz. prehranske omejitve:",
+      "comments": "Druge opombe ali prošnje:"
+    },
+    "options": {
+      "yes": "JA",
+      "no": "NE"
+    },
+    "submit": "Potrdi udeležbo",
+    "success": "Hvala za vaš odgovor! Prejeli smo vaš RSVP."
+  },
+  "transport": {
+    "slovenian_guests": "Slovenski gostje: za slovenske goste je predvidena organizacija prevoza s kombiji glede na posamezne prihode/odhode gostov, kar bom uskladila bilateralno z vsakim gostom po prejemu potrditev udeležbe."
+  },
+  "common": {
+    "click_to_copy": "Kliknite za kopiranje",
+    "copied": "Kopirano!"
+  }
+}

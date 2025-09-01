@@ -1,221 +1,107 @@
-<!doctype html>
-<html lang="en-US" class="js">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>S&A 10.14.20</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
-  </head>
-  <body class="primary-button-style-solid header-overlay-alignment-center header-width-full tweak-transparent-header tweak-fixed-header">
-    <div id="siteWrapper" class="site-wrapper">
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paula & Pierre - Mariage 2 mai 2026</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <nav class="header__nav">
+        <a href="/" class="header__link header__link--active" data-i18n="nav.home">Accueil</a>
+        <a href="/accommodation" class="header__link" data-i18n="nav.accommodation">Se loger</a>
+        <a href="/gifts" class="header__link" data-i18n="nav.gifts">Cadeaux</a>
+        <a href="/rsvp" class="header__link" data-i18n="nav.rsvp">RSVP</a>
+      </nav>
       
-      <!-- Header -->
-      <header id="header" class="black header" data-section-theme="black">
-        <div class="header-display-desktop">
-          <div class="header-title-nav-wrapper">
-            <div class="header-nav">
-              <div class="header-nav-wrapper">
-                <nav class="header-nav-list">
-                  <div class="header-nav-item">
-                    <a href="#ceremony">Ceremony & Reception</a>
-                  </div>
-                  <div class="header-nav-item">
-                    <a href="#travel">Travel & Stay</a>
-                  </div>
-                  <div class="header-nav-item">
-                    <a href="#registry">Registry</a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-            
-            <div class="header-title-text">
-              <h1>S&A 10.14.20</h1>
-            </div>
-            
-            <div class="header-actions">
-              <div class="header-actions-action">
-                <a class="btn btn--border" href="#rsvp">RSVP</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="header-display-mobile">
-          <div class="header-title-nav-wrapper">
-            <div class="header-title-text">
-              <h1>S&A 10.14.20</h1>
-            </div>
-            
-            <div class="header-nav">
-              <div class="header-nav-wrapper">
-                <nav class="header-nav-list">
-                  <div class="header-nav-item">
-                    <a href="#ceremony">Ceremony & Reception</a>
-                  </div>
-                  <div class="header-nav-item">
-                    <a href="#travel">Travel & Stay</a>
-                  </div>
-                  <div class="header-nav-item">
-                    <a href="#registry">Registry</a>
-                  </div>
-                </nav>
-              </div>
-            </div>
-            
-            <div class="header-actions">
-              <div class="header-actions-action">
-                <a class="btn btn--border" href="#rsvp">RSVP</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <!-- Hero Section -->
-        <section class="page-section hero-section layout-engine-section section-height--large content-width--medium black" data-section-theme="black">
-          <div class="section-background">
-            <div class="section-background-overlay"></div>
-          </div>
-          <div class="content-wrapper">
-            <div class="sqs-layout">
-              <div class="sqs-block-html">
-                <div class="sqs-block-content">
-                  <h1>We're Getting Married!</h1>
-                  <h2>Soria & Antoine</h2>
-                  <p class="sqsrte-large">10 . 14 . 20</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Ceremony Section -->
-        <section id="ceremony" class="page-section ceremony-section layout-engine-section section-height--large content-width--medium black" data-section-theme="black">
-          <div class="section-background">
-            <div class="section-background-overlay"></div>
-          </div>
-          <div class="content-wrapper">
-            <div class="sqs-layout">
-              <div class="sqs-block-html">
-                <div class="sqs-block-content">
-                  <h2>Ceremony</h2>
-                  <p class="sqsrte-large">4:00 PM</p>
-                  <p><strong>Grace Church</strong></p>
-                  <p>37 Bear Blvd<br>Flagstaff, AZ 86001</p>
-                  <p><a href="https://maps.google.com/?q=Flagstaff,+AZ">Map</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Reception Section -->
-        <section class="page-section reception-section layout-engine-section section-height--large content-width--medium black" data-section-theme="black">
-          <div class="section-background">
-            <div class="section-background-overlay"></div>
-          </div>
-          <div class="content-wrapper">
-            <div class="sqs-layout">
-              <div class="sqs-block-html">
-                <div class="sqs-block-content">
-                  <h2>Reception</h2>
-                  <p class="sqsrte-large">4:30 PM - 10:00 PM</p>
-                  <p><strong>The Barrel Keg</strong></p>
-                  <p>51 Dirt Rd<br>Flagstaff, AZ 86001</p>
-                  <p><a href="https://maps.google.com/?q=Flagstaff,+AZ">Map</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Story Section -->
-        <section class="page-section story-section layout-engine-section section-height--large content-width--medium black" data-section-theme="black">
-          <div class="section-background">
-            <div class="section-background-overlay"></div>
-          </div>
-          <div class="content-wrapper">
-            <div class="sqs-layout">
-              <div class="sqs-block-html">
-                <div class="sqs-block-content">
-                  <h2>See how it all started</h2>
-                  <p><a class="btn btn--border" href="#our-story">Our Story</a></p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- Join Us Section -->
-        <section class="page-section join-section layout-engine-section section-height--large content-width--medium">
-          <div class="content-wrapper">
-            <div class="sqs-layout">
-              <div class="sqs-block-html">
-                <div class="sqs-block-content">
-                  <h2>Join Us</h2>
-                  <h3>We hope you can make it!</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- RSVP Section -->
-        <section id="rsvp" class="rsvp-section">
-          <div class="rsvp-content">
-            <h2>RSVP</h2>
-            <p>Please confirm your attendance</p>
-            <form class="rsvp-form">
-              <div class="form-group">
-                <input type="text" name="name" placeholder="Your Name" required>
-              </div>
-              <div class="form-group">
-                <input type="email" name="email" placeholder="Your Email" required>
-              </div>
-              <div class="form-group">
-                <select name="attendance" required>
-                  <option value="">Will you attend?</option>
-                  <option value="yes">Yes, I'll be there!</option>
-                  <option value="no">Sorry, can't make it</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <input type="number" name="guests" placeholder="Number of guests" min="1" max="5">
-              </div>
-              <button type="submit" class="btn btn-primary">Submit RSVP</button>
-            </form>
-          </div>
-        </section>
-      </main>
-
-      <!-- Footer -->
-      <footer class="footer">
-        <div class="footer-content">
-          <div class="footer-contact">
-            <a href="mailto:email@example.com">Email Us</a>
-          </div>
-          <div class="footer-nav">
-            <a href="#ceremony">Ceremony & Reception</a>
-            <a href="#travel">Travel & Stay</a>
-            <a href="#registry">Registry</a>
-            <a href="#rsvp">RSVP</a>
-          </div>
-          <div class="footer-social">
-            <p>Share</p>
-            <p class="hashtag">#SA2020</p>
-          </div>
-          <div class="footer-credits">
-            <p>Made with Squarespace</p>
-          </div>
-        </div>
-      </footer>
+      <div class="header__language">
+        <button class="header__lang-btn header__lang-btn--active">FR</button>
+        <button class="header__lang-btn">SL</button>
+      </div>
     </div>
+  </header>
 
-    <script type="module" src="/src/main.js"></script>
-  </body>
+  <main class="main">
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 data-i18n="home.title">Paula & Pierre</h1>
+      <div class="date">
+        <span data-i18n="home.date">2 mai 2026</span>
+      </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events">
+        <article class="event event--ceremony">
+          <div class="event__image">
+              <img src="/Accueil2.png" alt="Messe">
+          </div>
+          <div class="event__content">
+            <h2 class="event__title" data-i18n="home.ceremony.title">Messe</h2>
+            <div class="event__time" data-i18n="home.ceremony.time">14 heures</div>
+            
+            <div class="event__location">
+              <h3 class="event__location-name" data-i18n="home.ceremony.location">Église Saint-Étienne du Mont</h3>
+              <address class="event__address" data-i18n-html="home.ceremony.address">
+                Place Sainte-Geneviève<br>
+                75005 Paris, France
+              </address>
+              <a href="#" class="event__map-link" data-i18n="home.ceremony.map">Plan</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Reception -->
+        <article class="event event--reception">
+          <div class="event__content">
+            <h2 class="event__title" data-i18n="home.reception.title">Cocktail et dîner</h2>
+            <div class="event__time" data-i18n="home.reception.time">À partir de 17 heures</div>
+            
+            <div class="event__location">
+              <h3 class="event__location-name" data-i18n="home.reception.location">Abbaye de Cercanceaux</h3>
+              <address class="event__address" data-i18n-html="home.reception.address">
+                Rue Antoine Héroët<br>
+                77460 Souppes-sur-Loing, France
+              </address>
+              <a href="#" class="event__map-link" data-i18n="home.reception.map">Plan</a>
+            </div>
+
+            <div class="event__transport">
+              <div class="event__transport-option">
+                <span data-i18n="home.reception.transport.car">Voiture : une heure de trajet par l'A6 et l'A77 depuis Paris</span>
+              </div>
+              <div class="event__transport-option">
+                <span data-i18n="home.reception.transport.train">Train : Arrêt « Souppes-sur-Loing » sur la ligne R, 1h15 depuis Gare de Lyon</span>
+              </div>
+            </div>
+          </div>
+          <div class="event__image">
+            <img src="/Accueil3.jpeg" alt="Reception">
+          </div>
+        </article>
+    </section>
+
+    <!-- Accommodation Section -->
+    <section class="accommodation-section">
+      <div class="accommodation-divider">
+        <hr>
+        <h2 data-i18n="home.accommodation_cta.title">Se loger près de l'abbaye</h2>
+        <hr>
+      </div>
+      <a href="/accommodation" class="action-button" data-i18n="home.accommodation_cta.button">Les lieux</a>
+    </section>
+
+    <!-- RSVP Section -->
+    <section class="rsvp-section">
+      <div class="content">
+        <h2 data-i18n="home.closing.title">Nous avons hâte de vous recevoir !</h2>
+        <a href="/rsvp" class="action-button" data-i18n="home.closing.button">RSVP</a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
 </html>

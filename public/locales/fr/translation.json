@@ -1,0 +1,91 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "accommodation": "Se loger",
+    "gifts": "Cadeaux",
+    "faq": "FAQ",
+    "rsvp": "RSVP"
+  },
+  "home": {
+    "title": "Paula & Pierre",
+    "date": "2 mai 2026",
+    "ceremony": {
+      "title": "Messe",
+      "time": "14 heures",
+      "location": "Église Saint-Étienne du Mont",
+      "address": "Place Sainte-Geneviève<br>75005 Paris, France",
+      "map": "Plan"
+    },
+    "reception": {
+      "title": "Cocktail et dîner",
+      "time": "À partir de 17 heures",
+      "location": "Abbaye de Cercanceaux",
+      "address": "Rue Antoine Héroët<br>77460 Souppes-sur-Loing, France",
+      "map": "Plan",
+      "transport": {
+        "car": "Voiture : une heure de trajet par l'A6 et l'A77 depuis Paris",
+        "train": "Train : Arrêt « Souppes-sur-Loing » sur la ligne R, 1h15 depuis Gare de Lyon"
+      }
+    },
+    "accommodation_cta": {
+      "title": "Se loger près de l'abbaye",
+      "button": "Les lieux"
+    },
+    "closing": {
+      "title": "Nous avons hâte de vous recevoir !",
+      "button": "RSVP"
+    }
+  },
+  "accommodation": {
+    "title": "Se loger",
+    "subtitle": "Se loger près de la fête",
+    "note": "Veuillez laisser les deux chambres d'hôtes de Souppes-sur-Loing pour les personnes non voiturées.",
+    "breakfast": "Petit-déjeuner léger servi chez nous le 3 au matin avant midi (12 rue de la Vallée aux Chats, 77620 Bransles).",
+    "sections": {
+      "guesthouses": "Chambres d'hôtes",
+      "hotels": "Hôtels",
+      "cottages": "Gîtes"
+    },
+    "items": {
+      "hotel_warning": "Attention : il ne s'agit pas de l'abbaye de Cercanceaux",
+      "four_stars": "Hôtel quatre étoiles"
+    }
+  },
+  "gifts": {
+    "title": "Cadeaux",
+    "message": "Beaucoup d'entre vous viennent de loin pour assister à notre mariage. Votre présence nous suffit amplement. Si vous le souhaitez, vous pouvez tout de même contribuer à notre voyage de noces avec la cagnotte suivante :",
+    "button": "Contribuer au voyage de noces"
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "coming_soon": "Contenu à venir..."
+  },
+  "rsvp": {
+    "title": "RSVP",
+    "subtitle": "Veuillez répondre par le biais de ce formulaire.",
+    "fields": {
+      "firstName": "Prénom :",
+      "lastName": "Nom :",
+      "email": "E-mail :",
+      "phone": "Téléphone :",
+      "ceremony_attendance": "Je serai présent à la messe de mariage à Paris :",
+      "reception_attendance": "Je serai présent à la fête à Cercanceaux :",
+      "guest_count": "Nous serons :",
+      "adults": "adultes",
+      "children": "enfants",
+      "guest_names": "Nom des autres invités pour lesquels je réponds :",
+      "allergies": "Allergies ou restrictions alimentaires :",
+      "comments": "Commentaire ou demande :"
+    },
+    "options": {
+      "yes": "Oui",
+      "no": "Non"
+    },
+    "submit": "Répondre",
+    "success": "Merci pour votre réponse ! Nous avons bien reçu votre RSVP."
+  },
+  "common": {
+    "click_to_copy": "Cliquer pour copier",
+    "copied": "Copié !"
+  }
+}

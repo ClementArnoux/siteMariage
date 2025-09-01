@@ -1,54 +1,207 @@
-import './style.scss'
+import './styles/main.scss'
+import i18n from './i18n.js'
 
-// Smooth scrolling for navigation links
-document.addEventListener('DOMContentLoaded', function() {
-  // Handle smooth scrolling
-  const links = document.querySelectorAll('a[href^="#"]');
+// Import page-specific styles based on current page
+const currentPage = window.location.pathname;
+if (currentPage === '/' || currentPage === '/index.html') {
+  import('./styles/home.scss');
+} else if (currentPage === '/accommodation' || currentPage === '/accommodation.html') {
+  import('./styles/accommodation.scss');
+} else if (currentPage === '/gifts' || currentPage === '/gifts.html') {
+  import('./styles/gifts.scss');
+} else if (currentPage === '/rsvp' || currentPage === '/rsvp.html') {
+  import('./styles/rsvp.scss');
+}
+
+let currentLanguage = 'fr';
+
+// Fonctions utilitaires i18n
+const t = (key, options = {}) => i18n.t(key, options);
+
+// Initialise la langue (par défaut français, changé via bouton)
+function initializeLanguage() {
+  // Récupérer la langue depuis localStorage ou utiliser 'fr' par défaut
+  currentLanguage = localStorage.getItem('language') || 'fr';
   
-  links.forEach(link => {
-    link.addEventListener('click', function(e) {
-      e.preventDefault();
-      
-      const targetId = this.getAttribute('href');
-      const targetSection = document.querySelector(targetId);
-      
-      if (targetSection) {
-        targetSection.scrollIntoView({
-          behavior: 'smooth'
-        });
-      }
-    });
+  // S'assurer que i18next utilise la bonne langue
+  if (i18n.isInitialized) {
+    i18n.changeLanguage(currentLanguage);
+  }
+  
+  // Mettre à jour le HTML
+  document.documentElement.setAttribute('lang', currentLanguage);
+  document.documentElement.setAttribute('data-lang', currentLanguage);
+}
+
+// Fonction pour traduire et injecter du contenu
+function translateContent() {
+  // Traduire tous les éléments avec data-i18n (text content)
+  document.querySelectorAll('[data-i18n]').forEach(element => {
+    const key = element.getAttribute('data-i18n');
+    const translation = t(key);
+    element.textContent = translation;
   });
 
-  // Handle RSVP form
-  const rsvpForm = document.querySelector('.rsvp-form');
-  if (rsvpForm) {
-    rsvpForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Get form data
-      const formData = new FormData(this);
-      const data = Object.fromEntries(formData.entries());
-      
-      // Simple form validation
-      if (data.name && data.email && data.attendance) {
-        alert('Merci ! Votre réponse a été enregistrée.');
-        this.reset();
-      } else {
-        alert('Veuillez remplir tous les champs obligatoires.');
-      }
-    });
-  }
+  // Traduire tous les éléments avec data-i18n-html (HTML content)
+  document.querySelectorAll('[data-i18n-html]').forEach(element => {
+    const key = element.getAttribute('data-i18n-html');
+    const translation = t(key);
+    element.innerHTML = translation;
+  });
 
-  // Add header scroll effect
-  const header = document.querySelector('.header');
-  if (header) {
-    window.addEventListener('scroll', function() {
-      if (window.scrollY > 100) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+  // Traduire les placeholders
+  document.querySelectorAll('[data-i18n-placeholder]').forEach(element => {
+    const key = element.getAttribute('data-i18n-placeholder');
+    element.placeholder = t(key);
+  });
+
+  // Traduire les titres (title attributes)
+  document.querySelectorAll('[data-i18n-title]').forEach(element => {
+    const key = element.getAttribute('data-i18n-title');
+    element.title = t(key);
+  });
+}
+
+// Fonction pour mettre à jour les boutons de langue
+function updateLanguageSwitcher() {
+  const languageSwitcher = document.querySelector('.header__language');
+  
+  if (languageSwitcher) {
+    // Créer les boutons de changement de langue avec événements
+    languageSwitcher.innerHTML = `
+      <button class="header__lang-btn ${currentLanguage === 'fr' ? 'header__lang-btn--active' : ''}" data-lang="fr">FR</button>
+      <button class="header__lang-btn ${currentLanguage === 'sl' ? 'header__lang-btn--active' : ''}" data-lang="sl">SL</button>
+    `;
+    
+    // Ajouter les événements de clic
+    languageSwitcher.querySelectorAll('.header__lang-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const newLang = e.target.getAttribute('data-lang');
+        changeLanguage(newLang);
+      });
     });
   }
+}
+
+// Fonction pour changer la langue
+async function changeLanguage(lang) {
+  if (lang === currentLanguage) return;
+  
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  
+  // Mettre à jour l'attribut HTML
+  document.documentElement.setAttribute('lang', lang);
+  document.documentElement.setAttribute('data-lang', lang);
+  
+  // Changer la langue d'i18next
+  await i18n.changeLanguage(lang);
+  
+  // Retraduire tout le contenu
+  translateContent();
+  
+  // Mettre à jour les boutons
+  updateLanguageSwitcher();
+}
+
+// Gestion des formulaires RSVP
+function handleRSVPForm(event) {
+  event.preventDefault();
+  
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData.entries());
+  
+  // Ajouter la langue aux données
+  data.language = currentLanguage;
+  
+  // Message de succès traduit
+  alert(t('rsvp.success'));
+  
+  console.log('RSVP Data:', data);
+}
+
+// Fonctionnalités interactives
+function addInteractivity() {
+  // Hover effects pour les éléments d'accommodation
+  document.querySelectorAll('.accommodation-item').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      item.style.transform = 'translateY(-5px)';
+      item.style.transition = 'transform 0.3s ease';
+    });
+    
+    item.addEventListener('mouseleave', () => {
+      item.style.transform = 'translateY(0)';
+    });
+  });
+  
+  // Click to copy pour téléphones et emails
+  document.querySelectorAll('.accommodation-item p').forEach(info => {
+    const text = info.textContent;
+    if (text.includes('@') || text.includes('+33')) {
+      info.style.cursor = 'pointer';
+      info.title = t('common.click_to_copy');
+      
+      info.addEventListener('click', () => {
+        let textToCopy = text;
+        if (text.includes('@')) {
+          const emailMatch = text.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/);
+          if (emailMatch) textToCopy = emailMatch[0];
+        } else if (text.includes('+33')) {
+          const phoneMatch = text.match(/\+33[0-9\s]+/);
+          if (phoneMatch) textToCopy = phoneMatch[0].replace(/\s/g, '');
+        }
+        
+        navigator.clipboard.writeText(textToCopy).then(() => {
+          const originalText = info.textContent;
+          info.textContent = t('common.copied');
+          info.style.color = 'var(--primary-color)';
+          
+          setTimeout(() => {
+            info.textContent = originalText;
+            info.style.color = '';
+          }, 1500);
+        });
+      });
+    }
+  });
+}
+
+// Header scroll animation
+function handleHeaderScroll() {
+  const header = document.querySelector('.header');
+  const scrolled = window.scrollY > 100;
+  
+  if (scrolled) {
+    header.classList.add('header--scrolled');
+  } else {
+    header.classList.remove('header--scrolled');
+  }
+}
+
+// Initialisation
+document.addEventListener('DOMContentLoaded', async () => {
+  // Initialiser la langue
+  initializeLanguage();
+  
+  // Attendre que i18next soit prêt
+  await i18n.changeLanguage(currentLanguage);
+  
+  // Traduire le contenu
+  translateContent();
+  
+  // Mettre à jour le sélecteur de langue
+  updateLanguageSwitcher();
+  
+  // Ajouter l'interactivité
+  addInteractivity();
+  
+  // Gérer les formulaires RSVP
+  const rsvpForms = document.querySelectorAll('.rsvp-form');
+  rsvpForms.forEach(form => {
+    form.addEventListener('submit', handleRSVPForm);
+  });
+  
+  // Gérer l'animation du header au scroll
+  window.addEventListener('scroll', handleHeaderScroll);
+  handleHeaderScroll(); // Appeler une fois au chargement
 });

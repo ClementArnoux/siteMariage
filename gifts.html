@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadeaux - Paula & Pierre</title>
+  <link rel="icon" type="image/svg+xml" href="/vite.svg">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <nav class="header__nav">
+        <a href="/" class="header__link" data-i18n="nav.home">Accueil</a>
+        <a href="/accommodation" class="header__link" data-i18n="nav.accommodation">Se loger</a>
+        <a href="/gifts" class="header__link header__link--active" data-i18n="nav.gifts">Cadeaux</a>
+        <a href="/rsvp" class="header__link" data-i18n="nav.rsvp">RSVP</a>
+      </nav>
+      
+      <div class="header__language">
+        <button class="header__lang-btn header__lang-btn--active">FR</button>
+        <button class="header__lang-btn">SL</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--gifts">
+      <h1 data-i18n="gifts.title">Cadeaux</h1>
+    </section>
+
+    <section class="gifts">
+      <div class="gifts__container">
+        <p class="gifts__message" data-i18n="gifts.message">Beaucoup d'entre vous viennent de loin pour assister à notre mariage. Votre présence nous suffit amplement. Si vous le souhaitez, vous pouvez tout de même contribuer à notre voyage de noces avec la cagnotte suivante :</p>
+        
+        <a href="https://www.papayoux.com/fr/cagnotte/poro-no-potovanje-voyage-de-noces-paula-pierre" 
+           target="_blank" 
+           class="gifts__button"
+           data-i18n="gifts.button">
+          Contribuer au voyage de noces
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>
