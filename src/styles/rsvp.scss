@@ -1,3 +1,6 @@
+// Import base styles
+@use 'main';
+
 // RSVP Page Styles
 
 .rsvp {
@@ -11,7 +14,7 @@
     background: rgba(255, 255, 255, 0.6);
     padding: 48px;
     border-radius: 8px;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.04);
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
   }
   
   &__submit {
@@ -39,7 +42,7 @@
 }
 
 // Responsive styles
-@media (max-width: 1024px) {
+@media (max-width: 720px) {
   .rsvp {
     &__container {
       padding: 24px 12px;
@@ -54,7 +57,7 @@
     
     &__submit {
       padding: 18px 32px;
-      font-size: 14px;
+      font-size: 16px;
       letter-spacing: 1.2px;
       margin-top: 20px;
     }

@@ -1,3 +1,6 @@
+// Import base styles
+@use 'main';
+
 // Home Page Specific Styles
 
 // Date styling for homepage hero
@@ -5,13 +8,18 @@
   margin-top: 32px;
   
   span {
-    font-family: var(--font-serif);
     font-size: 35px;
     font-weight: 300;
     color: white;
     display: block;
     letter-spacing: 1px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  }
+}
+
+.header__container {
+  > * {
+    flex: 1;
   }
 }
 
@@ -50,7 +58,6 @@
   }
 
   &__title {
-    font-family: var(--font-serif);
     font-size: 40px;
     font-weight: 400;
     margin-bottom: 24px;
@@ -71,7 +78,6 @@
   }
 
   &__location-name {
-    font-family: var(--font-serif);
     font-size: 26px;
     font-weight: 400;
     margin-bottom: 13px;
@@ -94,7 +100,7 @@
     text-decoration: none;
     padding: 10px 0;
     font-weight: 400;
-    font-size: 14px;
+    font-size: 16px;
     letter-spacing: 0.5px;
     text-transform: uppercase;
     border-bottom: 1px solid black;
@@ -119,7 +125,7 @@
     margin: 16px 0;
     border-radius: 6px;
     border-left: 3px solid black;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 1.5;
     color: black;
   }
@@ -132,7 +138,7 @@
   position: relative;
   
   .content {
-    background-image: url('/Accueil4.png');
+    background-image: url('/PierrePaula.png');
     background-size: cover;
     background-position: center;
     min-height: calc(100vh - 160px);
@@ -145,7 +151,6 @@
   }
   
   h2 {
-    font-family: var(--font-serif);
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 32px;
@@ -169,7 +174,6 @@
   text-align: center;
   
   h2 {
-    font-family: var(--font-serif);
     font-size: 45px;
     font-weight: 400;
     margin-bottom: 32px;
@@ -205,7 +209,7 @@
 }
 
 // Responsive styles
-@media (max-width: 1024px) {
+@media (max-width: 720px) {
   .hero {
     padding-top: 100px;
     
@@ -281,7 +285,7 @@
     &__transport-option {
       padding: 18px;
       margin: 10px 0;
-      font-size: 14px;
+      font-size: 16px;
     }
   }
   

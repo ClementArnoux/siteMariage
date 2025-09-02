@@ -4,13 +4,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Paula Qualizza & Pierre Arnoux - Mariage 2 mai 2026</title>
-  <link rel="icon" type="image/svg+xml" href="/vite.svg">
-  <link rel="preload" href="/Accueil1s.jpeg" as="image">
-  <link rel="preload" href="/Accueil3d.jpeg" as="image">
-  <link rel="preload" href="/src/styles/main.scss" as="style">
-  <link rel="preload" href="/src/styles/home.scss" as="style">
-  <link rel="stylesheet" href="/src/styles/main.scss">
+  <link rel="preload" href="/homeHero.jpeg" as="image">
+  <link rel="preload" href="/messe.png" as="image">
+  <link rel="preload" href="/lieu.jpeg" as="image">
+  <link rel="preload" href="/PierrePaula.png" as="image">
+
+  <!-- Local Fonts Preload for instant loading -->
+  <link rel="preload" href="/fonts/CormorantGaramond-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- Inter from Google Fonts (for now) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS (home.scss inclut automatiquement main.scss) -->
   <link rel="stylesheet" href="/src/styles/home.scss">
+
+  <link rel="icon" type="image/svg+xml" href="/PP.svg">
 </head>
 <body>
   <header class="header">
@@ -22,13 +33,17 @@
         <a href="/rsvp" class="header__link" data-i18n="nav.rsvp">RSVP</a>
       </nav>
       
+      <!-- Wedding couple and date -->
+      <div class="header__couple">
+        P&P 02.05.26
+      </div>
+      
       <div class="header__language">
         <button class="header__lang-btn header__lang-btn--active">FR</button>
         <button class="header__lang-btn">SL</button>
       </div>
     </div>
   </header>
-
   <main class="main">
     <!-- Hero Section -->
     <section class="hero">
@@ -42,7 +57,7 @@
     <section class="events">
         <article class="event event--ceremony">
           <div class="event__image">
-              <img src="/Accueil2.png" alt="Messe">
+              <img src="/messe.png" alt="Messe" aspect-ratio="1124/1536">
           </div>
           <div class="event__content">
             <h2 class="event__title" data-i18n="home.ceremony.title">Messe</h2>
@@ -84,7 +99,7 @@
             </div>
           </div>
           <div class="event__image">
-            <img src="/Accueil3.jpeg" alt="Reception">
+            <img src="/lieu.jpeg" alt="Reception" aspect-ratio="540/716">
           </div>
         </article>
     </section>
