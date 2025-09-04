@@ -1,0 +1,619 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../public/fonts/CormorantGaramond-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 300 600;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Cormorant Garamond";
+  src: url("../public/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf") format("truetype-variations");
+  font-weight: 300 600;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("../public/fonts/AGaramondPro-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("../public/fonts/AGaramondPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("../public/fonts/AGaramondPro-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Adobe Garamond Pro";
+  src: url("../public/fonts/AGaramondPro-BoldItalic.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: block;
+}
+@font-face {
+  font-family: "Orpheus";
+  src: url("../public/fonts/Orpheus.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Orpheus Pro";
+  src: url("../public/fonts/Orpheus-Pro.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+:root {
+  --border-color: #e8e6e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Adobe Garamond Pro";
+  font-weight: 300;
+  line-height: 1.7;
+  color: black;
+  background-color: rgb(223, 224, 225);
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.header {
+  background: transparent;
+  padding: 32px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  font-family: "Adobe Garamond Pro";
+}
+.header--scrolled {
+  background: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 24px 0;
+}
+.header__container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.header__link {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+.header__link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: white;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+.header__link:hover::after {
+  transform: scaleX(1);
+}
+.header__link--active::after {
+  transform: scaleX(1);
+}
+.header__language {
+  display: flex;
+  gap: 5px;
+  justify-content: end;
+}
+.header__lang-btn {
+  background: transparent;
+  border: none;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 5px 8px;
+  border-radius: 2px;
+  font-size: 11px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.header__lang-btn:hover {
+  color: white;
+}
+.header__lang-btn--active {
+  color: white;
+  font-weight: 500;
+}
+.header__couple {
+  font-family: "Adobe Garamond Pro";
+  font-size: 24px;
+  font-weight: 400;
+  color: white;
+  letter-spacing: 2px;
+  line-height: 1;
+  text-align: center;
+}
+
+.main {
+  margin-top: 0;
+}
+
+.hero {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 128px 32px 80px;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.hero h1 {
+  font-size: 56px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  color: white;
+  letter-spacing: -1px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.hero p {
+  font-size: 21px;
+  line-height: 1.7;
+  color: white;
+  margin-top: 16px;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+.hero:not(.hero--accommodation):not(.hero--rsvp):not(.hero--gifts) {
+  min-height: 100vh;
+  background-image: url("../public/homeHero.jpeg");
+}
+.hero.hero--accommodation {
+  background-image: url("../public/lieu.jpeg");
+}
+.hero.hero--gifts {
+  background-image: url("../public/cagnote.jpeg");
+}
+.hero.hero--rsvp {
+  background-image: url("../public/rsvpHero2.jpeg");
+}
+
+.btn {
+  background: black;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.btn:hover {
+  background: black;
+  transform: translateY(-1px);
+}
+
+.btn-rsvp {
+  background: black;
+  color: white;
+  border: none;
+  padding: 13px 32px;
+  border-radius: 3px;
+  font-weight: 400;
+  font-size: 16px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.btn-rsvp:hover {
+  background: black;
+  transform: translateY(-1px);
+}
+
+.action-button {
+  background: white;
+  color: black;
+  border: none;
+  padding: 19px 32px;
+  border-radius: 0;
+  font-size: 16px;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  line-height: 1.7;
+}
+.action-button:hover {
+  background: black;
+  color: white;
+  transform: translateY(-1px);
+}
+
+.form-field {
+  margin-bottom: 40px;
+}
+.form-field__label {
+  display: block;
+  margin-bottom: 13px;
+  font-weight: 400;
+  color: black;
+  font-size: 16px;
+}
+.form-field__input, .form-field__textarea, .form-field__select {
+  width: 100%;
+  padding: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 0;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.8);
+  transition: border-color 0.3s ease;
+}
+.form-field__input:focus, .form-field__textarea:focus, .form-field__select:focus {
+  outline: none;
+  border-color: black;
+}
+.form-field__textarea {
+  resize: vertical;
+  min-height: 120px;
+  line-height: 1.6;
+}
+.form-field__radio-group {
+  display: flex;
+  gap: 48px;
+  margin-top: 16px;
+}
+.form-field__radio-group label {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  cursor: pointer;
+  font-weight: 300;
+}
+.form-field__radio-group label input[type=radio] {
+  width: auto;
+  margin: 0;
+  accent-color: black;
+}
+.form-field__guest-count {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+}
+.form-field__guest-count select {
+  width: auto;
+  min-width: 100px;
+  padding: 13px;
+}
+.form-field__guest-count span {
+  font-weight: 300;
+}
+
+.item-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 32px;
+  margin-bottom: 32px;
+  border-left: 3px solid black;
+  transition: all 0.3s ease;
+}
+.item-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.04);
+}
+.item-card h4 {
+  color: black;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.item-card address {
+  font-style: normal;
+  margin: 16px 0;
+  line-height: 1.6;
+  color: black;
+}
+.item-card .contact {
+  margin: 16px 0;
+  line-height: 1.6;
+  color: black;
+}
+.item-card .note {
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+.item-card .rating {
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+}
+
+@media (max-width: 720px) {
+  .header {
+    padding: 16px 0;
+  }
+  .header__container {
+    padding: 0 12px;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .header__nav {
+    gap: 12px;
+    order: 2;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .header__language {
+    order: 1;
+    gap: 6px;
+  }
+  .header__link {
+    font-size: 11px;
+    padding-bottom: 4px;
+    letter-spacing: 0.5px;
+  }
+  .header__lang-btn {
+    font-size: 10px;
+    padding: 3px 6px;
+  }
+  .header__couple {
+    order: 0;
+    margin-bottom: 8px;
+  }
+  .hero {
+    min-height: 65vh;
+    padding: 80px 12px 40px;
+  }
+  .hero h1 {
+    font-size: 36px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .hero p {
+    font-size: 17px;
+    line-height: 1.5;
+    margin-top: 12px;
+  }
+  .form-field__radio-group {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .form-field__guest-count {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .item-card {
+    padding: 20px;
+  }
+  .btn-rsvp {
+    padding: 8px 16px;
+    font-size: 12px;
+  }
+  .action-button {
+    padding: 16px 24px;
+    font-size: 13px;
+  }
+}
+.accommodation-intro {
+  max-width: 800px;
+  margin: 0 auto 64px;
+  padding: 0 32px;
+  font-weight: 400;
+}
+.accommodation-intro h2 {
+  font-size: 40px;
+  margin: 48px 0 32px;
+  color: black;
+  text-align: center;
+}
+.accommodation-intro .note {
+  background: rgba(255, 255, 255, 0.8);
+  border-left: 3px solid black;
+  padding: 24px;
+  margin: 32px 0;
+  font-weight: 400;
+  font-size: 16px;
+  color: black;
+}
+.accommodation-intro .info {
+  background: rgba(255, 255, 255, 0.6);
+  border-left: 3px solid black;
+  padding: 32px;
+  margin: 32px 0;
+  font-size: 16px;
+}
+.accommodation-intro .info p {
+  margin: 8px 0;
+  line-height: 1.7;
+  color: black;
+}
+
+.accommodations {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px 64px;
+}
+
+.category {
+  margin-bottom: 64px;
+}
+.category h3 {
+  font-size: 29px;
+  font-weight: 400;
+  margin-bottom: 32px;
+  color: black;
+  text-align: center;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.category__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+  margin-top: 32px;
+}
+
+.accommodation-item {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 32px;
+  margin-bottom: 32px;
+  border-left: 3px solid black;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+.accommodation-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+.accommodation-item h4 {
+  color: black;
+  font-size: 21px;
+  font-weight: 400;
+  margin-bottom: 16px;
+}
+.accommodation-item address {
+  font-style: normal;
+  margin: 16px 0;
+  line-height: 1.6;
+  color: black;
+}
+.accommodation-item .contact {
+  margin: 16px 0;
+  line-height: 1.6;
+  color: black;
+  cursor: pointer;
+}
+.accommodation-item .contact:hover {
+  opacity: 0.7;
+}
+.accommodation-item .note {
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  margin-bottom: 8px;
+  opacity: 0.6;
+}
+.accommodation-item .rating {
+  font-weight: 600;
+  color: black;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  opacity: 0.6;
+}
+
+@media (max-width: 720px) {
+  .accommodation-intro {
+    padding: 0 12px;
+    margin: 0 auto 48px;
+  }
+  .accommodation-intro h2 {
+    font-size: 32px;
+    margin: 32px 0 20px;
+  }
+  .accommodation-intro .note {
+    padding: 16px;
+    margin: 24px 0;
+    font-size: 16px;
+  }
+  .accommodation-intro .info {
+    padding: 18px;
+    margin: 24px 0;
+  }
+  .accommodation-intro .info p {
+    font-size: 16px;
+  }
+  .accommodations {
+    padding: 0 12px 40px;
+  }
+  .category {
+    margin-bottom: 32px;
+  }
+  .category h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .category__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin-top: 20px;
+  }
+  .accommodation-item {
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .accommodation-item h4 {
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  .accommodation-item address, .accommodation-item .contact {
+    font-size: 16px;
+    margin: 12px 0;
+  }
+  .accommodation-item .note, .accommodation-item .rating {
+    font-size: 13px;
+  }
+}
+
+/*# sourceMappingURL=accommodation.css.map */

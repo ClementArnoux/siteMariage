@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RSVP - Paula & Pierre</title>
+  <link rel="icon" type="image/svg+xml" href="public/PP.svg">
+  <link rel="preload" href="public/rsvpHero2.jpeg" as="image" fetchpriority="high">
+  
+  <!-- Local Fonts Preload for instant loading -->
+  <link rel="preload" href="public/fonts/CormorantGaramond-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="public/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+  
+  <!-- Inter from Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- CSS -->
+  <!-- Critical CSS inline for hero loading -->
+  <style>
+    .hero {
+      background-color: #2c1810 !important;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      transition: opacity 0.3s ease;
+    }
+  </style>
+  
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/rsvp.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <nav class="header__nav">
+        <a href="index_standalone.html" class="header__link" data-i18n="nav.home">Accueil</a>
+        <a href="accommodation_standalone.html" class="header__link" data-i18n="nav.accommodation">Se loger</a>
+        <a href="gifts_standalone.html" class="header__link" data-i18n="nav.gifts">Cadeaux</a>
+        <a href="rsvp_standalone.html" class="header__link header__link--active" data-i18n="nav.rsvp">RSVP</a>
+      </nav>
+      
+      <div class="header__language">
+        <button class="header__lang-btn header__lang-btn--active">FR</button>
+        <button class="header__lang-btn">SL</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero hero--rsvp">
+      <h1 data-i18n="rsvp.title">RSVP</h1>
+      <p data-i18n="rsvp.subtitle">Veuillez répondre par le biais de ce formulaire.</p>
+    </section>
+
+    <section class="rsvp">
+      <div class="rsvp__container">
+        <form class="rsvp__form">
+          
+          <div class="form-field">
+            <label for="firstName" class="form-field__label" data-i18n="rsvp.fields.firstName">Prénom :</label>
+            <input type="text" id="firstName" name="firstName" class="form-field__input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="lastName" class="form-field__label" data-i18n="rsvp.fields.lastName">Nom :</label>
+            <input type="text" id="lastName" name="lastName" class="form-field__input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="email" class="form-field__label" data-i18n="rsvp.fields.email">E-mail :</label>
+            <input type="email" id="email" name="email" class="form-field__input" required>
+          </div>
+
+          <div class="form-field">
+            <label for="phone" class="form-field__label" data-i18n="rsvp.fields.phone">Téléphone :</label>
+            <input type="tel" id="phone" name="phone" class="form-field__input">
+          </div>
+
+          <div class="form-field">
+            <div class="form-field__label" data-i18n="rsvp.fields.ceremony_attendance">Je serai présent à la messe de mariage à Paris :</div>
+            <div class="form-field__radio-group">
+              <label class="form-field__radio">
+                <input type="radio" name="ceremony" value="oui" class="form-field__radio-input"> 
+                <span class="form-field__radio-label" data-i18n="rsvp.options.yes">Oui</span>
+              </label>
+              <label class="form-field__radio">
+                <input type="radio" name="ceremony" value="non" class="form-field__radio-input"> 
+                <span class="form-field__radio-label" data-i18n="rsvp.options.no">Non</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <div class="form-field__label" data-i18n="rsvp.fields.reception_attendance">Je serai présent à la fête à Cercanceaux :</div>
+            <div class="form-field__radio-group">
+              <label class="form-field__radio">
+                <input type="radio" name="reception" value="oui" class="form-field__radio-input"> 
+                <span class="form-field__radio-label" data-i18n="rsvp.options.yes">Oui</span>
+              </label>
+              <label class="form-field__radio">
+                <input type="radio" name="reception" value="non" class="form-field__radio-input"> 
+                <span class="form-field__radio-label" data-i18n="rsvp.options.no">Non</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <div class="form-field__label" data-i18n="rsvp.fields.guest_count">Nous serons :</div>
+            <div class="form-field__guest-count">
+              <select name="adults" class="form-field__select">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+              </select>
+              <span class="form-field__select-label" data-i18n="rsvp.fields.adults">adultes</span>
+              
+              <select name="children" class="form-field__select">
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+              </select>
+              <span class="form-field__select-label" data-i18n="rsvp.fields.children">enfants</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="guestNames" class="form-field__label" data-i18n="rsvp.fields.guest_names">Nom des autres invités pour lesquels je réponds :</label>
+            <textarea id="guestNames" name="guestNames" class="form-field__textarea" rows="3"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="allergies" class="form-field__label" data-i18n="rsvp.fields.allergies">Allergies ou restrictions alimentaires :</label>
+            <textarea id="allergies" name="allergies" class="form-field__textarea" rows="3"></textarea>
+          </div>
+
+          <div class="form-field">
+            <label for="comments" class="form-field__label" data-i18n="rsvp.fields.comments">Commentaire ou demande :</label>
+            <textarea id="comments" name="comments" class="form-field__textarea" rows="4"></textarea>
+          </div>
+
+          <button type="submit" class="rsvp__submit" data-i18n="rsvp.submit">Répondre</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- i18next from CDN -->
+  <script src="https://unpkg.com/i18next@23.15.1/dist/umd/i18next.min.js"></script>
+  <script src="https://unpkg.com/i18next-http-backend@2.6.1/dist/umd/i18nextHttpBackend.min.js"></script>
+  <script src="https://unpkg.com/i18next-browser-languagedetector@8.0.0/dist/umd/i18nextBrowserLanguageDetector.min.js"></script>
+  
+  <!-- Application JS -->
+  <script src="js/main.js"></script>
+</body>
+</html>
