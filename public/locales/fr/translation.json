@@ -7,7 +7,7 @@
     "rsvp": "RSVP"
   },
   "home": {
-    "title": "Paula & Pierre",
+    "title": "Paula Qualizza et Pierre Arnoux",
     "date": "2 mai 2026",
     "ceremony": {
       "title": "Messe",
@@ -54,7 +54,8 @@
   "gifts": {
     "title": "Cadeaux",
     "message": "Beaucoup d'entre vous viennent de loin pour assister à notre mariage. Votre présence nous suffit amplement. Si vous le souhaitez, vous pouvez tout de même contribuer à notre voyage de noces avec la cagnotte suivante :",
-    "button": "Contribuer au voyage de noces"
+    "button": "Contribuer au voyage de noces",
+    "anonymous": "Votre don est anonyme."
   },
   "faq": {
     "title": "Questions fréquentes",
@@ -86,6 +87,15 @@
   },
   "common": {
     "click_to_copy": "Cliquer pour copier",
-    "copied": "Copié !"
+    "copied": "Copié !",
+    "phone_fixed": "Fixe",
+    "phone_mobile": "Portable"
+  },
+  "footer": {
+    "contacts": "Contacts",
+    "paula": "Paula",
+    "pierre": "Pierre",
+    "website_by": "Site réalisé par",
+    "developer": "Claude (Anthropic)"
   }
 }
