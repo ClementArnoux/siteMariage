@@ -7,7 +7,7 @@
     "rsvp": "RSVP"
   },
   "home": {
-    "title": "Paula & Pierre",
+    "title": "Paula Qualizza et Pierre Arnoux",
     "date": "2 mai 2026",
     "ceremony": {
       "title": "Messe",
@@ -54,7 +54,8 @@
   "gifts": {
     "title": "Cadeaux",
     "message": "Beaucoup d'entre vous viennent de loin pour assister à notre mariage. Votre présence nous suffit amplement. Si vous le souhaitez, vous pouvez tout de même contribuer à notre voyage de noces avec la cagnotte suivante :",
-    "button": "Contribuer au voyage de noces"
+    "button": "Contribuer au voyage de noces",
+    "anonymous": "Votre don est anonyme."
   },
   "faq": {
     "title": "Questions fréquentes",
@@ -86,6 +87,35 @@
   },
   "common": {
     "click_to_copy": "Cliquer pour copier",
-    "copied": "Copié !"
+    "copied": "Copié !",
+    "phone_fixed": "Fixe",
+    "phone_mobile": "Portable"
+  },
+  "footer": {
+    "contacts": "Contacts",
+    "paula": "Paula",
+    "pierre": "Pierre",
+    "website_by": "Site réalisé par",
+    "developer": "Clément A"
+  },
+  "email_confirmation": {
+    "subject": "Confirmation RSVP - Paula & Pierre",
+    "greeting": "MERCI {{name}} !",
+    "received": "Votre RSVP a été reçu avec joie",
+    "attending_ceremony": "Nous vous attendons à la messe !",
+    "attending_reception": "Nous vous attendons à la fête !",
+    "excited": "Nous avons hâte de célébrer avec vous !",
+    "events_reminder": "RAPPEL DES ÉVÉNEMENTS",
+    "ceremony_details": "MESSE - 2 mai 2026, 14h\\nEglise Saint-Etienne du Mont\\nPlace Sainte-Geneviève, 75005 Paris",
+    "reception_details": "FÊTE - À partir de 17h\\nAbbaye de Cercanceaux\\nRue Antoine Héroët, 77460 Souppes-sur-Loing",
+    "practical_info": "INFORMATIONS PRATIQUES",
+    "accommodation_info": "• Hébergements : Voir les options disponibles",
+    "gifts_info": "• Liste de cadeaux : Nos suggestions",
+    "transport_car": "• Voiture : 1h de trajet Paris - Cercanceaux (A6/A77)",
+    "transport_train": "• Train : Direct Gare de Lyon - Souppes-sur-Loing (1h15)",
+    "questions": "QUESTIONS ? Contactez-nous :",
+    "email_contact": "Email : pierrearnouxdmr@gmail.com",
+    "reply_instruction": "Ou répondez simplement à cet email",
+    "signature": "Paula & Pierre\\n2 mai 2026 - Nous comptons sur vous !"
   }
 }

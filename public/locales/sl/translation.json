@@ -4,10 +4,10 @@
     "accommodation": "Nastanitve",
     "gifts": "Darila",
     "faq": "Pogosta vprašanja",
-    "rsvp": "RSVP"
+    "rsvp": "Potrditi"
   },
   "home": {
-    "title": "Paula & Pierre",
+    "title": "Paula Qualizza in Pierre Arnoux",
     "date": "2. maj 2026",
     "ceremony": {
       "title": "Sv. maša",
@@ -17,7 +17,7 @@
       "map": "Zemljevid"
     },
     "reception": {
-      "title": "Koktajl in večeria",
+      "title": "Koktejl in večerja",
       "time": "od 17. ure dalje",
       "location": "Opatija Cercanceaux",
       "address": "Rue Antoine Héroët<br>77460 Souppes-sur-Loing, Francija",
@@ -27,13 +27,17 @@
         "train": "Z vlakom: postaja « Souppes-sur-Loing » z linijo R iz železniške postaje Gare de Lyon v Parizu"
       }
     },
+    "paris_accommodation": {
+      "title": "Nastanitve v Parizu",
+      "info": "Nastanitve v Parizu s petka na soboto: za uskladitev in pomoč pri urejanju nastanitev v Parizu kontaktirajte Pauli (paula.c.qualizza@gmail.com / +386 31 448 288)."
+    },
     "accommodation_cta": {
-      "title": "Nastanitve v bližini opatije s sobote na nedeljo",
+      "title": "Nastanitve v bližini opatije",
       "button": "Lokacije"
     },
     "closing": {
-      "title": "Veseliva se vašega prihoda",
-      "button": "RSVP"
+      "title": "Veseliva se vaše družbe na ta za naju tako poseben dan!",
+      "button": "Potrditi udeležbo"
     }
   },
   "accommodation": {
@@ -53,15 +57,16 @@
   },
   "gifts": {
     "title": "Darila",
-    "message": "Mnogi prihajate od daleč, da bi se udeležili najine poroke, zato nama vaša prisotnost popolnoma zadostuje. V kolikor pa bi kljub temu želeli darovati, bo na dan poroke možno oddati prispevek za najino poročno potovanje, ali prek te povezave :",
-    "button": "Prispevaj za poročno potovanje"
+    "message": "Ker boste mnogi izmed vas prišli od daleč, nama že vaša prisotnost izredno veliko pomeni. V kolikor boste vseeno hteli prispevati za najino poročno potovanje, bo na dan poroke možno oddati dar, na voljo pa je tudi spletni \"pujsek\" na sledeči povezavi:",
+    "button": "Prispevaj za poročno potovanje",
+    "anonymous": "Vaš dar je anonimen."
   },
   "faq": {
     "title": "Pogosta vprašanja",
     "coming_soon": "Vsebina bo kmalu na voljo..."
   },
   "rsvp": {
-    "title": "RSVP",
+    "title": "Potrditi",
     "subtitle": "Potrdite svojo udeležbo preko spodnjega obrazca.",
     "fields": {
       "firstName": "Ime:",
@@ -82,13 +87,40 @@
       "no": "NE"
     },
     "submit": "Potrdi udeležbo",
-    "success": "Hvala za vaš odgovor! Prejeli smo vaš RSVP."
+    "success": "Hvala za vaš odgovor! Prejeli smo vaš Potrditi."
   },
   "transport": {
     "slovenian_guests": "Slovenski gostje: za slovenske goste je predvidena organizacija prevoza s kombiji glede na posamezne prihode/odhode gostov, kar bom uskladila bilateralno z vsakim gostom po prejemu potrditev udeležbe."
   },
   "common": {
     "click_to_copy": "Kliknite za kopiranje",
-    "copied": "Kopirano!"
+    "copied": "Kopirano!",
+    "phone_fixed": "stacionarni",
+    "phone_mobile": "mobilni"
+  },
+  "footer": {
+    "contacts": "Kontakti",
+    "paula": "Paula",
+    "pierre": "Pierre",
+    "website_by": "Spletno stran je naredil",
+    "developer": "Claude (Anthropic)"
+  },
+  "email_confirmation": {
+    "subject": "Potrditev udeležbe - Paula & Pierre",
+    "greeting": "HVALA {{name}}!",
+    "received": "Prejela sva tvojo potrditev udeležbe.",
+    "attending_ceremony": "Pričakujeva te pri sv. maši.",
+    "attending_reception": "Pričakujeva te na slavju.",
+    "excited": "Komaj čakava, da bomo skupaj praznovali!",
+    "events_reminder": "OPOMNIK DOGODKOV",
+    "ceremony_details": "Sv. maša: 2. maj 2026 ob 14.00 v cerkvi Saint-Etienne du Mont\\nPlace Sainte-Geneviève, 75005 Pariz",
+    "reception_details": "Slavje od 17. ure dalje: Opatija Cercanceaux\\nRue Antoine Héroët, 77460 Souppes-sur-Loing",
+    "practical_info": "PRAKTIČNE INFORMACIJE",
+    "accommodation_info": "Nastanitve",
+    "transport_info": "Logistika/prevozi po dogovoru s Paulo po prejemu potrditev.",
+    "questions": "VPRAŠANJA? Kontaktiraj naju na:",
+    "email_contacts": "paula.c.qualizza@gmail.com ali pierrearnouxdmr@gmail.com",
+    "reply_instruction": "ali preprosto odgovori na ta email.",
+    "signature": "Paula in Pierre\\n2. maj 2026 - Računava na tebe!"
   }
 }

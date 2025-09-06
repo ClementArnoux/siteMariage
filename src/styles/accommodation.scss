@@ -28,11 +28,13 @@
   }
   
   .info {
-    background: rgba(255, 255, 255, 0.6);
-    border-left: 3px solid black;
-    padding: 32px;
+    background: rgba(255, 248, 220, 0.9); // Couleur plus visible (beige chaud)
+    border: 2px solid #d4a574; // Bordure dorée
+    border-radius: 8px;
+    padding: 40px;
     margin: 32px 0;
-    font-size: 16px;
+    font-size: 18px; // Plus grand
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Ombre légère
     
     p {
       margin: 8px 0;
@@ -81,10 +83,7 @@
   transition: all 0.3s ease;
   border-radius: 4px;
   
-  &:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
-  }
+  // Hover effect removed to avoid link appearance
   
   h4 {
     color: black;
@@ -147,11 +146,11 @@
     }
     
     .info {
-      padding: 18px;
+      padding: 24px;
       margin: 24px 0;
       
       p {
-        font-size: 16px;
+        font-size: 17px; // Plus grand sur mobile aussi
       }
     }
   }

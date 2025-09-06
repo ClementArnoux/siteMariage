@@ -7,7 +7,6 @@
   <link rel="preload" href="/homeHero.jpeg" as="image">
   <link rel="preload" href="/messe.png" as="image">
   <link rel="preload" href="/lieu.jpeg" as="image">
-  <link rel="preload" href="/PierrePaula.png" as="image">
 
   <!-- Local Fonts Preload for instant loading -->
   <link rel="preload" href="/fonts/CormorantGaramond-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
@@ -26,6 +25,15 @@
 <body>
   <header class="header">
     <div class="header__container">
+
+      <div class="header__mobile-toggle-container">
+        <button class="header__mobile-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+      
       <nav class="header__nav">
         <a href="/" class="header__link header__link--active" data-i18n="nav.home">Accueil</a>
         <a href="/accommodation" class="header__link" data-i18n="nav.accommodation">Se loger</a>
@@ -35,10 +43,11 @@
       
       <!-- Wedding couple and date -->
       <div class="header__couple">
-        P&P 02.05.26
+        P&P 02.05.2026
       </div>
       
-      <div class="header__language">
+      <!-- Desktop language switcher -->
+      <div class="header__language header__language--desktop">
         <button class="header__lang-btn header__lang-btn--active">FR</button>
         <button class="header__lang-btn">SL</button>
       </div>
@@ -69,7 +78,7 @@
                 Place Sainte-Geneviève<br>
                 75005 Paris, France
               </address>
-              <a href="#" class="event__map-link" data-i18n="home.ceremony.map">Plan</a>
+              <a href="https://maps.app.goo.gl/vmv8moWDfoiRTGDYA" class="event__map-link" data-i18n="home.ceremony.map">Plan</a>
             </div>
           </div>
         </article>
@@ -86,7 +95,7 @@
                 Rue Antoine Héroët<br>
                 77460 Souppes-sur-Loing, France
               </address>
-              <a href="#" class="event__map-link" data-i18n="home.reception.map">Plan</a>
+              <a href="https://maps.app.goo.gl/CFyWYixtMDxMFnFv6" class="event__map-link" data-i18n="home.reception.map">Plan</a>
             </div>
 
             <div class="event__transport">
@@ -122,6 +131,29 @@
       </div>
     </section>
   </main>
+
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__contacts">
+        <h3 data-i18n="footer.contacts">Contacts</h3>
+        <div class="footer__contact-group">
+          <div class="footer__contact">
+            <h4 data-i18n="footer.paula">Paula</h4>
+            <p>paula.c.qualizza@gmail.com</p>
+            <p>+386 31 448 288</p>
+          </div>
+          <div class="footer__contact">
+            <h4 data-i18n="footer.pierre">Pierre</h4>
+            <p>pierrearnouxdmr@gmail.com</p>
+            <p>+33 6 72 98 49 92</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer__credits">
+        <p><span data-i18n="footer.website_by">Site réalisé par</span> <a href="https://www.linkedin.com/in/clement-arnoux/" target="_blank" rel="noopener noreferrer" data-i18n="footer.developer">Clément A</a></p>
+      </div>
+    </div>
+  </footer>
 
   <script type="module" src="/src/main.js"></script>
 </body>
