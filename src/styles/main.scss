@@ -164,6 +164,7 @@ body::before {
     display: flex;
     gap: 5px;
     justify-content: end;
+
   }
 
   &__lang-btn {
@@ -172,8 +173,6 @@ body::before {
     color: rgba(255, 255, 255, 0.7);
     padding: 5px 8px;
     border-radius: 2px;
-    font-size: 11px;
-    font-weight: 400;
     letter-spacing: 0.3px;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -196,6 +195,11 @@ body::before {
     letter-spacing: 2px;
     line-height: 1;
     text-align: center;
+    text-wrap: nowrap;
+
+    @media screen and (max-width: 520px) {
+      display: none;      
+    }
   }
 }
 
@@ -251,7 +255,7 @@ body::before {
   
   // RSVP page hero
   &.hero--rsvp {
-    background-image: url('/rsvpHero2.jpeg');
+    background-image: url('/rsvpHero.jpeg');
   }
 }
 
@@ -447,16 +451,10 @@ body::before {
 }
 
 // Responsive Design
-@media (max-width: 720px) {
+@media (max-width: 1124px) {
   .header {
     padding: 16px 0;
-    
-    &__container {
-      padding: 0 12px;
-      flex-direction: column;
-      gap: 12px;
-    }
-    
+        
     &__nav {
       gap: 12px;
       order: 2;
@@ -465,7 +463,6 @@ body::before {
     }
     
     &__language {
-      order: 1;
       gap: 6px;
     }
     
@@ -473,16 +470,6 @@ body::before {
       font-size: 11px;
       padding-bottom: 4px;
       letter-spacing: 0.5px;
-    }
-    
-    &__lang-btn {
-      font-size: 10px;
-      padding: 3px 6px;
-    }
-
-    &__couple {
-      order: 0;
-      margin-bottom: 8px;
     }
   }
   
@@ -597,6 +584,128 @@ body::before {
     
     &__credits {
       text-align: center;
+    }
+  }
+}
+
+// Mobile Header Navigation
+.header {
+
+  &__mobile-toggle-container {
+    display: none;
+  }
+
+  // Mobile hamburger button
+  &__mobile-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    max-width: 30px;
+    max-height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+    
+    span {
+      width: 100%;
+      height: 2px;
+      background: white;
+      transition: all 0.3s ease;
+      transform-origin: center;
+    }
+    
+    &.active {
+      span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+      }
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+      }
+    }
+  }
+  
+  // Desktop language switcher visible by default
+  &__language--desktop {
+    display: flex;
+  }
+  
+  // Mobile language switcher hidden by default
+  &__language--mobile {
+    display: none;
+    margin-top: 20px;
+    justify-content: center;
+    gap: 10px;
+  }
+  
+  @media (max-width: 1124px) {
+    &__container {
+      position: relative;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+
+    
+    // Show hamburger button on mobile
+    &__mobile-toggle-container {
+      display: block;
+    }
+    
+    // Mobile navigation menu
+    &__nav {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 300px;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.95);
+      backdrop-filter: blur(10px);
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      padding-top: 80px;
+      transition: right 0.3s ease;
+      z-index: 1000;
+      gap: 0;
+      
+      &.active {
+        right: 0;
+      }
+    }
+    
+    &__link {
+      padding: 20px 0;
+      width: 80%;
+      text-align: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 18px;
+      
+      &:last-of-type {
+        border-bottom: none;
+      }
+    }
+    
+    // Show mobile language switcher in menu
+    &__language--mobile {
+      display: flex;
+    }
+    
+    // Overlay when menu is open
+    &__nav::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: calc(100vw - 300px);
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: -1;
     }
   }
 }

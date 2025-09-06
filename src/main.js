@@ -103,6 +103,78 @@ async function changeLanguage(lang) {
   updateLanguageSwitcher();
 }
 
+// Génération de l'email de confirmation
+function generateConfirmationEmail(formData, language) {
+  const name = formData.firstName || '';
+  const attending = {
+    ceremony: formData.ceremony === 'oui',
+    reception: formData.reception === 'oui'
+  };
+  
+  // Obtenir les traductions pour l'email
+  const emailTexts = {
+    subject: t('email_confirmation.subject'),
+    greeting: t('email_confirmation.greeting').replace('{{name}}', name.toUpperCase()),
+    received: t('email_confirmation.received'),
+    attendingCeremony: attending.ceremony ? t('email_confirmation.attending_ceremony') : '',
+    attendingReception: attending.reception ? t('email_confirmation.attending_reception') : '',
+    excited: t('email_confirmation.excited'),
+    eventsReminder: t('email_confirmation.events_reminder'),
+    ceremonyDetails: t('email_confirmation.ceremony_details'),
+    receptionDetails: t('email_confirmation.reception_details'),
+    practicalInfo: t('email_confirmation.practical_info'),
+    accommodationInfo: t('email_confirmation.accommodation_info'),
+    giftsInfo: t('email_confirmation.gifts_info'),
+    transportCar: t('email_confirmation.transport_car'),
+    transportTrain: t('email_confirmation.transport_train'),
+    transportInfo: t('email_confirmation.transport_info'), // Pour SL
+    questions: t('email_confirmation.questions'),
+    emailContact: t('email_confirmation.email_contact'),
+    emailContacts: t('email_confirmation.email_contacts'), // Pour SL
+    replyInstruction: t('email_confirmation.reply_instruction'),
+    signature: t('email_confirmation.signature')
+  };
+  
+  // Construire l'email selon la langue
+  let emailBody = `${emailTexts.greeting}\n\n`;
+  emailBody += `${emailTexts.received}\n`;
+  
+  if (attending.ceremony) {
+    emailBody += `${emailTexts.attendingCeremony}\n`;
+  }
+  if (attending.reception) {
+    emailBody += `${emailTexts.attendingReception}\n`;
+  }
+  
+  emailBody += `${emailTexts.excited}\n\n`;
+  emailBody += `${emailTexts.eventsReminder}\n\n`;
+  emailBody += `${emailTexts.ceremonyDetails}\n\n`;
+  emailBody += `${emailTexts.receptionDetails}\n\n`;
+  emailBody += `${emailTexts.practicalInfo}\n`;
+  
+  if (language === 'fr') {
+    emailBody += `${emailTexts.accommodationInfo}\n`;
+    emailBody += `${emailTexts.giftsInfo}\n`;
+    emailBody += `${emailTexts.transportCar}\n`;
+    emailBody += `${emailTexts.transportTrain}\n\n`;
+    emailBody += `${emailTexts.questions}\n`;
+    emailBody += `${emailTexts.emailContact}\n`;
+  } else {
+    emailBody += `${emailTexts.accommodationInfo}\n`;
+    emailBody += `${emailTexts.transportInfo}\n\n`;
+    emailBody += `${emailTexts.questions}\n`;
+    emailBody += `${emailTexts.emailContacts}\n`;
+  }
+  
+  emailBody += `${emailTexts.replyInstruction}\n\n`;
+  emailBody += `${emailTexts.signature}`;
+  
+  return {
+    subject: emailTexts.subject,
+    body: emailBody
+  };
+}
+
 // Gestion des formulaires RSVP
 async function handleRSVPForm(event) {
   event.preventDefault();
@@ -119,6 +191,11 @@ async function handleRSVPForm(event) {
     const formData = new FormData(form);
     const data = Object.fromEntries(formData.entries());
     data.language = currentLanguage;
+    
+    // Générer l'email de confirmation
+    const confirmationEmail = generateConfirmationEmail(data, currentLanguage);
+    data.confirmationSubject = confirmationEmail.subject;
+    data.confirmationBody = confirmationEmail.body;
     
     // Envoyer via Google Apps Script
     const response = await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {
@@ -202,6 +279,36 @@ function handleHeaderScroll() {
   }
 }
 
+// Mobile menu toggle
+function initMobileMenu() {
+  const mobileToggle = document.querySelector('.header__mobile-toggle');
+  const mobileNav = document.querySelector('.header__nav');
+  
+  if (mobileToggle && mobileNav) {
+    mobileToggle.addEventListener('click', () => {
+      mobileToggle.classList.toggle('active');
+      mobileNav.classList.toggle('active');
+    });
+    
+    // Close menu when clicking on links
+    const navLinks = mobileNav.querySelectorAll('.header__link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+      });
+    });
+    
+    // Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+      if (!mobileToggle.contains(e.target) && !mobileNav.contains(e.target)) {
+        mobileToggle.classList.remove('active');
+        mobileNav.classList.remove('active');
+      }
+    });
+  }
+}
+
 // Initialisation
 document.addEventListener('DOMContentLoaded', async () => {
   // Initialiser la langue
@@ -228,4 +335,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Gérer l'animation du header au scroll
   window.addEventListener('scroll', handleHeaderScroll);
   handleHeaderScroll(); // Appeler une fois au chargement
+  
+  // Initialiser le menu mobile
+  initMobileMenu();
 });

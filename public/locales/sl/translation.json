@@ -104,5 +104,23 @@
     "pierre": "Pierre",
     "website_by": "Spletno stran je naredil",
     "developer": "Claude (Anthropic)"
+  },
+  "email_confirmation": {
+    "subject": "Potrditev udeležbe - Paula & Pierre",
+    "greeting": "HVALA {{name}}!",
+    "received": "Prejela sva tvojo potrditev udeležbe.",
+    "attending_ceremony": "Pričakujeva te pri sv. maši.",
+    "attending_reception": "Pričakujeva te na slavju.",
+    "excited": "Komaj čakava, da bomo skupaj praznovali!",
+    "events_reminder": "OPOMNIK DOGODKOV",
+    "ceremony_details": "Sv. maša: 2. maj 2026 ob 14.00 v cerkvi Saint-Etienne du Mont\\nPlace Sainte-Geneviève, 75005 Pariz",
+    "reception_details": "Slavje od 17. ure dalje: Opatija Cercanceaux\\nRue Antoine Héroët, 77460 Souppes-sur-Loing",
+    "practical_info": "PRAKTIČNE INFORMACIJE",
+    "accommodation_info": "Nastanitve",
+    "transport_info": "Logistika/prevozi po dogovoru s Paulo po prejemu potrditev.",
+    "questions": "VPRAŠANJA? Kontaktiraj naju na:",
+    "email_contacts": "paula.c.qualizza@gmail.com ali pierrearnouxdmr@gmail.com",
+    "reply_instruction": "ali preprosto odgovori na ta email.",
+    "signature": "Paula in Pierre\\n2. maj 2026 - Računava na tebe!"
   }
 }

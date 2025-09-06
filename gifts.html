@@ -22,14 +22,29 @@
 <body>
   <header class="header">
     <div class="header__container">
+      
+      <div class="header__mobile-toggle-container">
+        <button class="header__mobile-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
       <nav class="header__nav">
         <a href="/" class="header__link" data-i18n="nav.home">Accueil</a>
         <a href="/accommodation" class="header__link" data-i18n="nav.accommodation">Se loger</a>
         <a href="/gifts" class="header__link header__link--active" data-i18n="nav.gifts">Cadeaux</a>
         <a href="/rsvp" class="header__link" data-i18n="nav.rsvp">RSVP</a>
+        
+        <!-- Language switcher in mobile menu -->
+        <div class="header__language header__language--mobile">
+          <button class="header__lang-btn header__lang-btn--active">FR</button>
+          <button class="header__lang-btn">SL</button>
+        </div>
       </nav>
       
-      <div class="header__language">
+      <div class="header__language header__language--desktop">
         <button class="header__lang-btn header__lang-btn--active">FR</button>
         <button class="header__lang-btn">SL</button>
       </div>
@@ -69,13 +84,13 @@
           </div>
           <div class="footer__contact">
             <h4 data-i18n="footer.pierre">Pierre</h4>
-            <p>pierre.arnoux@example.com</p>
-            <p>+33 6 XX XX XX XX</p>
+            <p>pierrearnouxdmr@gmail.com</p>
+            <p>+33 6 72 98 49 92</p>
           </div>
         </div>
       </div>
       <div class="footer__credits">
-        <p><span data-i18n="footer.website_by">Site réalisé par</span> <span data-i18n="footer.developer">Claude (Anthropic)</span></p>
+        <p><span data-i18n="footer.website_by">Site réalisé par</span> <a href="https://www.linkedin.com/in/clement-arnoux/" target="_blank" rel="noopener noreferrer" data-i18n="footer.developer">Clément A</a></p>
       </div>
     </div>
   </footer>

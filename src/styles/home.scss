@@ -138,7 +138,7 @@
   position: relative;
   
   .content {
-    background-image: url('/PierrePaula.png');
+    background-image: url('/rsvp.jpeg');
     background-size: cover;
     background-position: center;
     min-height: calc(100vh - 160px);
@@ -153,11 +153,11 @@
   h2 {
     font-size: 45px;
     font-weight: 400;
-    margin-bottom: 32px;
+    margin-bottom: 24px;
     color: white;
     letter-spacing: -0.3px;
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
-    margin-top: 250px;
+    margin-top: -48px;
   }
   
   .action-button {
@@ -219,8 +219,7 @@
     }
     
     .date {
-      margin-top: 48px;
-      
+
       span {
         font-size: 26px;
       }

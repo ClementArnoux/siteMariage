@@ -1,5 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><path fill="none" d="M0 0h64v64H0z"/><text x="18" y="42" fill="#dfe0e1" font-family="serif" font-size="36" font-weight="bold">
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+  <!-- Première lettre P -->
+  <text x="4" y="58" font-family="serif" font-size="62" font-weight="bold"
+        fill="#dfe0e1" stroke="#000000" stroke-width="2">
     P
-  </text><text x="28" y="42" fill="#dfe0e1" font-family="serif" font-size="36" font-weight="bold" opacity=".9">
+  </text>
+
+  <!-- Deuxième lettre P, légèrement derrière -->
+  <text x="24" y="58" font-family="serif" font-size="62" font-weight="bold"
+        fill="#dfe0e1" stroke="#000000" stroke-width="2" opacity="0.9">
     P
-  </text></svg>
+  </text>
+</svg>
+
