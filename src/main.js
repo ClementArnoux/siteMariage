@@ -59,13 +59,23 @@ function translateContent() {
     const key = element.getAttribute('data-i18n-title');
     element.title = t(key);
   });
+
+  // Traduire les liens href
+  document.querySelectorAll('[data-i18n-href]').forEach(element => {
+    const key = element.getAttribute('data-i18n-href');
+    const href = t(key);
+    if (href && href !== key) { // S'assurer que la traduction existe
+      element.href = href;
+    }
+  });
 }
 
 // Fonction pour mettre à jour les boutons de langue
 function updateLanguageSwitcher() {
-  const languageSwitcher = document.querySelector('.header__language');
+  // Sélectionner TOUS les éléments de changement de langue (mobile et desktop)
+  const languageSwitchers = document.querySelectorAll('.header__language');
   
-  if (languageSwitcher) {
+  languageSwitchers.forEach(languageSwitcher => {
     // Créer les boutons de changement de langue avec événements
     languageSwitcher.innerHTML = `
       <button class="header__lang-btn ${currentLanguage === 'fr' ? 'header__lang-btn--active' : ''}" data-lang="fr">FR</button>
@@ -79,7 +89,7 @@ function updateLanguageSwitcher() {
         changeLanguage(newLang);
       });
     });
-  }
+  });
 }
 
 // Fonction pour changer la langue
