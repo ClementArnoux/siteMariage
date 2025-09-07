@@ -68,6 +68,16 @@ function translateContent() {
       element.href = href;
     }
   });
+
+  // Gérer l'affichage conditionnel selon la langue
+  const slovenianElements = document.querySelectorAll('.event__transport-option--slovenian');
+  slovenianElements.forEach(element => {
+    if (currentLanguage === 'sl') {
+      element.style.display = 'block';
+    } else {
+      element.style.display = 'none';
+    }
+  });
 }
 
 // Fonction pour mettre à jour les boutons de langue
@@ -114,35 +124,42 @@ async function changeLanguage(lang) {
 }
 
 // Génération de l'email de confirmation
-function generateConfirmationEmail(formData, language) {
+async function generateConfirmationEmail(formData, language) {
+  // S'assurer que les traductions de la langue sont chargées ET définir la langue courante
+  await i18n.loadLanguages(language);
+  await i18n.changeLanguage(language);
+  
   const name = formData.firstName || '';
   const attending = {
     ceremony: formData.ceremony === 'oui',
     reception: formData.reception === 'oui'
   };
   
-  // Obtenir les traductions pour l'email
+  // Fonction pour obtenir les traductions (maintenant que la langue est définie)
+  const tLang = (key, options = {}) => i18n.t(key, options);
+  
+  // Obtenir les traductions pour l'email dans la langue spécifiée
   const emailTexts = {
-    subject: t('email_confirmation.subject'),
-    greeting: t('email_confirmation.greeting').replace('{{name}}', name.toUpperCase()),
-    received: t('email_confirmation.received'),
-    attendingCeremony: attending.ceremony ? t('email_confirmation.attending_ceremony') : '',
-    attendingReception: attending.reception ? t('email_confirmation.attending_reception') : '',
-    excited: t('email_confirmation.excited'),
-    eventsReminder: t('email_confirmation.events_reminder'),
-    ceremonyDetails: t('email_confirmation.ceremony_details'),
-    receptionDetails: t('email_confirmation.reception_details'),
-    practicalInfo: t('email_confirmation.practical_info'),
-    accommodationInfo: t('email_confirmation.accommodation_info'),
-    giftsInfo: t('email_confirmation.gifts_info'),
-    transportCar: t('email_confirmation.transport_car'),
-    transportTrain: t('email_confirmation.transport_train'),
-    transportInfo: t('email_confirmation.transport_info'), // Pour SL
-    questions: t('email_confirmation.questions'),
-    emailContact: t('email_confirmation.email_contact'),
-    emailContacts: t('email_confirmation.email_contacts'), // Pour SL
-    replyInstruction: t('email_confirmation.reply_instruction'),
-    signature: t('email_confirmation.signature')
+    subject: tLang('email_confirmation.subject'),
+    greeting: tLang('email_confirmation.greeting').replace('{{name}}', name.toUpperCase()),
+    received: tLang('email_confirmation.received'),
+    attendingCeremony: attending.ceremony ? tLang('email_confirmation.attending_ceremony') : '',
+    attendingReception: attending.reception ? tLang('email_confirmation.attending_reception') : '',
+    excited: tLang('email_confirmation.excited'),
+    eventsReminder: tLang('email_confirmation.events_reminder'),
+    ceremonyDetails: tLang('email_confirmation.ceremony_details'),
+    receptionDetails: tLang('email_confirmation.reception_details'),
+    practicalInfo: tLang('email_confirmation.practical_info'),
+    accommodationInfo: tLang('email_confirmation.accommodation_info'),
+    giftsInfo: tLang('email_confirmation.gifts_info'),
+    transportCar: tLang('email_confirmation.transport_car'),
+    transportTrain: tLang('email_confirmation.transport_train'),
+    transportInfo: tLang('email_confirmation.transport_info'), // Pour SL
+    questions: tLang('email_confirmation.questions'),
+    emailContact: tLang('email_confirmation.email_contact'),
+    emailContacts: tLang('email_confirmation.email_contacts'), // Pour SL
+    replyInstruction: tLang('email_confirmation.reply_instruction'),
+    signature: tLang('email_confirmation.signature')
   };
   
   // Construire l'email selon la langue
@@ -179,6 +196,7 @@ function generateConfirmationEmail(formData, language) {
   emailBody += `${emailTexts.replyInstruction}\n\n`;
   emailBody += `${emailTexts.signature}`;
   
+  
   return {
     subject: emailTexts.subject,
     body: emailBody
@@ -203,7 +221,7 @@ async function handleRSVPForm(event) {
     data.language = currentLanguage;
     
     // Générer l'email de confirmation
-    const confirmationEmail = generateConfirmationEmail(data, currentLanguage);
+    const confirmationEmail = await generateConfirmationEmail(data, currentLanguage);
     data.confirmationSubject = confirmationEmail.subject;
     data.confirmationBody = confirmationEmail.body;
     

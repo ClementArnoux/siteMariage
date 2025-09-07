@@ -8,7 +8,7 @@ i18next
   .use(LanguageDetector)
   .init({
     fallbackLng: 'fr',
-    debug: import.meta.env.DEV, // Debug seulement en dev
+    debug: false, // Désactiver les logs
     
     // Configuration du backend pour charger les traductions
     backend: {

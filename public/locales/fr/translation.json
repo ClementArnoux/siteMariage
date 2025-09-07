@@ -84,7 +84,9 @@
       "no": "Non"
     },
     "submit": "Répondre",
-    "success": "Merci pour votre réponse ! Nous avons bien reçu votre RSVP."
+    "sending": "Envoi en cours...",
+    "success": "Merci pour votre réponse ! Nous avons bien reçu votre RSVP.",
+    "error": "Erreur lors de l'envoi. Veuillez réessayer."
   },
   "common": {
     "click_to_copy": "Cliquer pour copier",
@@ -107,11 +109,11 @@
     "attending_reception": "Nous vous attendons à la fête !",
     "excited": "Nous avons hâte de célébrer avec vous !",
     "events_reminder": "RAPPEL DES ÉVÉNEMENTS",
-    "ceremony_details": "MESSE - 2 mai 2026, 14h\\nEglise Saint-Etienne du Mont\\nPlace Sainte-Geneviève, 75005 Paris",
+    "ceremony_details": "MESSE - 2 mai 2026, 14h\\nÉglise Saint-Étienne du Mont\\nPlace Sainte-Geneviève, 75005 Paris",
     "reception_details": "FÊTE - À partir de 17h\\nAbbaye de Cercanceaux\\nRue Antoine Héroët, 77460 Souppes-sur-Loing",
     "practical_info": "INFORMATIONS PRATIQUES",
     "accommodation_info": "• Hébergements : Voir les options disponibles",
-    "gifts_info": "• Liste de cadeaux : Nos suggestions",
+    "gifts_info": "• Cagnotte pour le voyage de noces : Voir le lien sur le site",
     "transport_car": "• Voiture : 1h de trajet Paris - Cercanceaux (A6/A77)",
     "transport_train": "• Train : Direct Gare de Lyon - Souppes-sur-Loing (1h15)",
     "questions": "QUESTIONS ? Contactez-nous :",
