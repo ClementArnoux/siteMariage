@@ -180,14 +180,15 @@ async function generateConfirmationEmail(formData, language) {
   emailBody += `${emailTexts.practicalInfo}\n`;
   
   if (language === 'fr') {
-    emailBody += `${emailTexts.accommodationInfo}\n`;
-    emailBody += `${emailTexts.giftsInfo}\n`;
+    emailBody += `• Hébergements : https://paula-pierre-2026.com/accommodation\n`;
+    emailBody += `• Cagnotte voyage de noces : https://www.papayoux.com/fr/cagnotte/poro-no-potovanje-voyage-de-noces-paula-pierre\n`;
     emailBody += `${emailTexts.transportCar}\n`;
     emailBody += `${emailTexts.transportTrain}\n\n`;
     emailBody += `${emailTexts.questions}\n`;
     emailBody += `${emailTexts.emailContact}\n`;
   } else {
-    emailBody += `${emailTexts.accommodationInfo}\n`;
+    emailBody += `• Nastanitve: https://paula-pierre-2026.com/accommodation\n`;
+    emailBody += `• Darila za poročno potovanje: https://www.papayoux.com/rn/cagnotte/poro-no-potovanje-voyage-de-noces-paula-pierre\n`;
     emailBody += `${emailTexts.transportInfo}\n\n`;
     emailBody += `${emailTexts.questions}\n`;
     emailBody += `${emailTexts.emailContacts}\n`;
