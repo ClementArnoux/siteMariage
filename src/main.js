@@ -19,8 +19,26 @@ const t = (key, options = {}) => i18n.t(key, options);
 
 // Initialise la langue (par défaut français, changé via bouton)
 function initializeLanguage() {
-  // Récupérer la langue depuis localStorage ou utiliser 'fr' par défaut
-  currentLanguage = localStorage.getItem('language') || 'fr';
+  let detectedLanguage = 'fr'; // défaut
+  
+  // 1. Vérifier localStorage d'abord
+  const storedLanguage = localStorage.getItem('language');
+  
+  // 2. Si pas de langue stockée, détecter via navigateur
+  if (!storedLanguage) {
+    const browserLang = navigator.language || navigator.languages?.[0] || '';
+    console.log('Langue du navigateur détectée:', browserLang);
+    
+    // Si le navigateur est en slovène (sl, sl-SI, etc.) ou si l'utilisateur vient de Slovénie
+    if (browserLang.toLowerCase().startsWith('sl')) {
+      detectedLanguage = 'sl';
+      console.log('Slovène détecté via navigateur');
+    }
+  } else {
+    detectedLanguage = storedLanguage;
+  }
+  
+  currentLanguage = detectedLanguage;
   
   // S'assurer que i18next utilise la bonne langue
   if (i18n.isInitialized) {
