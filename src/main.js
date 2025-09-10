@@ -176,7 +176,8 @@ async function generateConfirmationEmail(formData, language) {
     questions: tLang('email_confirmation.questions'),
     contactUs: tLang('email_confirmation.contact_us'),
     replyInstruction: tLang('email_confirmation.reply_instruction'),
-    signature: tLang('email_confirmation.signature')
+    signature: tLang('email_confirmation.signature'),
+    title: tLang('email_confirmation.title')
   };
   
   // Construire l'email selon la langue
@@ -215,7 +216,8 @@ async function generateConfirmationEmail(formData, language) {
   
   return {
     subject: emailTexts.subject,
-    body: emailBody
+    body: emailBody,
+    title: emailTexts.title
   };
 }
 
@@ -240,6 +242,7 @@ async function handleRSVPForm(event) {
     const confirmationEmail = await generateConfirmationEmail(data, currentLanguage);
     data.confirmationSubject = confirmationEmail.subject;
     data.confirmationBody = confirmationEmail.body;
+    data.confirmationTitle = confirmationEmail.title;
     
     // Envoyer via Google Apps Script
     const response = await fetch(import.meta.env.VITE_GOOGLE_SCRIPT_URL, {

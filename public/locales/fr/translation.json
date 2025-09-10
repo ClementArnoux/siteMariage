@@ -103,7 +103,7 @@
     "developer": "Clément A"
   },
   "email_confirmation": {
-    "subject": "Confirmation RSVP - Paula & Pierre",
+    "subject": "Confirmation RSVP - Paula et Pierre",
     "greeting": "MERCI {{name}} !",
     "received": "Votre RSVP a été reçu avec joie",
     "attending_ceremony": "Nous vous attendons à la messe !",
@@ -119,8 +119,9 @@
     "accommodation_label": "Hébergements :",
     "gifts_label": "Cagnotte :",
     "questions": "QUESTIONS ?",
-    "contact_us": "Contactez-nous : pierrearnouxdmr@gmail.com",
+    "contact_us": "Contactez-nous : pierrearnouxdmr@gmail.com ou paula.c.qualizza@gmail.com",
     "reply_instruction": "Ou répondez simplement à cet email",
-    "signature": "Paula & Pierre"
+    "signature": "Paula et Pierre",
+    "title": "Paula et Pierre"
   }
 }

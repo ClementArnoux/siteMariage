@@ -110,7 +110,7 @@
     "developer": "Claude (Anthropic)"
   },
   "email_confirmation": {
-    "subject": "Potrditev udeležbe - Paula & Pierre",
+    "subject": "Potrditev udeležbe - Paula in Pierre",
     "greeting": "HVALA {{name}}!",
     "received": "Prejela sva tvojo potrditev udeležbe.",
     "attending_ceremony": "Pričakujeva te pri sv. maši.",
@@ -128,6 +128,7 @@
     "questions": "VPRAŠANJA?",
     "contact_us": "Kontakt: paula.c.qualizza@gmail.com ali pierrearnouxdmr@gmail.com",
     "reply_instruction": "Ali preprosto odgovori na ta email",
-    "signature": "Paula in Pierre"
+    "signature": "Paula in Pierre",
+    "title": "Paula in Pierre"
   }
 }
