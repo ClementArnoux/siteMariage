@@ -89,7 +89,7 @@
     },
     "submit": "Potrdi udeležbo",
     "sending": "Pošiljanje...",
-    "success": "Hvala za vaš odgovor! Prejeli smo vaš Potrditi.",
+    "success": "Hvala za vaš odgonor! Prejeli smo vašo potrditev",
     "error": "Napaka pri pošiljanju. Prosimo, poskusite znova."
   },
   "transport": {
@@ -116,19 +116,18 @@
     "attending_ceremony": "Pričakujeva te pri sv. maši.",
     "attending_reception": "Pričakujeva te na slavju.",
     "excited": "Komaj čakava, da bomo skupaj praznovali!",
-    "events_reminder": "OPOMNIK DOGODKOV",
-    "ceremony_details": "Sv. maša: 2. maj 2026 ob 14.00 v cerkvi Saint-Etienne du Mont\\nPlace Sainte-Geneviève, 75005 Pariz",
-    "reception_details": "Slavje od 17. ure dalje: Opatija Cercanceaux\\nRue Antoine Héroët, 77460 Souppes-sur-Loing",
     "practical_info": "PRAKTIČNE INFORMACIJE",
-    "accommodation_info": "Nastanitve",
-    "gifts_info": "Darila za poročno potovanje: glej povezavo na spletni strani",
-    "transport_car": "Avtomobil: 1h vožnje Pariz - Cercanceaux (A6/A77)",
-    "transport_train": "Vlak: direktno Gare de Lyon - Souppes-sur-Loing (1h15)",
-    "transport_info": "Logistika/prevozi po dogovoru s Paulo po prejemu potrditev.",
-    "email_contact": "E-pošta: pierrearnouxdmr@gmail.com",
-    "questions": "VPRAŠANJA? Kontaktiraj naju na:",
-    "email_contacts": "paula.c.qualizza@gmail.com ali pierrearnouxdmr@gmail.com",
-    "reply_instruction": "ali preprosto odgovori na ta email.",
-    "signature": "Paula in Pierre\\n2. maj 2026 - Računava na tebe!"
+    "ceremony_title": "SV. MAŠA - 2. maj 2026 ob 14.00",
+    "ceremony_location": "cerkev Saint-Étienne du Mont",
+    "ceremony_address": "Place Sainte-Geneviève, 75005 Pariz",
+    "reception_title": "SLAVJE - od 17. ure dalje",
+    "reception_location": "Opatija Cercanceaux",
+    "reception_address": "Rue Antoine Héroët, 77460 Souppes-sur-Loing",
+    "accommodation_label": "Nastanitve:",
+    "gifts_label": "Darila:",
+    "questions": "VPRAŠANJA?",
+    "contact_us": "Kontakt: paula.c.qualizza@gmail.com ali pierrearnouxdmr@gmail.com",
+    "reply_instruction": "Ali preprosto odgovori na ta email",
+    "signature": "Paula in Pierre"
   }
 }

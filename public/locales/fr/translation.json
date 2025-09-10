@@ -85,7 +85,7 @@
     },
     "submit": "Répondre",
     "sending": "Envoi en cours...",
-    "success": "Merci pour votre réponse ! Nous avons bien reçu votre RSVP.",
+    "success": "Merci pour votre réponse ! Nous avons bien reçu votre RSVP",
     "error": "Erreur lors de l'envoi. Veuillez réessayer."
   },
   "common": {
@@ -109,17 +109,18 @@
     "attending_ceremony": "Nous vous attendons à la messe !",
     "attending_reception": "Nous vous attendons à la fête !",
     "excited": "Nous avons hâte de célébrer avec vous !",
-    "events_reminder": "RAPPEL DES ÉVÉNEMENTS",
-    "ceremony_details": "MESSE - 2 mai 2026, 14h\\nÉglise Saint-Étienne du Mont\\nPlace Sainte-Geneviève, 75005 Paris",
-    "reception_details": "FÊTE - À partir de 17h\\nAbbaye de Cercanceaux\\nRue Antoine Héroët, 77460 Souppes-sur-Loing",
     "practical_info": "INFORMATIONS PRATIQUES",
-    "accommodation_info": "• Hébergements : Voir les options disponibles",
-    "gifts_info": "• Cagnotte pour le voyage de noces : Voir le lien sur le site",
-    "transport_car": "• Voiture : 1h de trajet Paris - Cercanceaux (A6/A77)",
-    "transport_train": "• Train : Direct Gare de Lyon - Souppes-sur-Loing (1h15)",
-    "questions": "QUESTIONS ? Contactez-nous :",
-    "email_contact": "Email : pierrearnouxdmr@gmail.com",
+    "ceremony_title": "MESSE - 2 mai 2026, 14h",
+    "ceremony_location": "Église Saint-Étienne du Mont",
+    "ceremony_address": "Place Sainte-Geneviève, 75005 Paris",
+    "reception_title": "FÊTE - À partir de 17h",
+    "reception_location": "Abbaye de Cercanceaux",
+    "reception_address": "Rue Antoine Héroët, 77460 Souppes-sur-Loing",
+    "accommodation_label": "Hébergements :",
+    "gifts_label": "Cagnotte :",
+    "questions": "QUESTIONS ?",
+    "contact_us": "Contactez-nous : pierrearnouxdmr@gmail.com",
     "reply_instruction": "Ou répondez simplement à cet email",
-    "signature": "Paula & Pierre\\n2 mai 2026 - Nous comptons sur vous !"
+    "signature": "Paula & Pierre"
   }
 }
