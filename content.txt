@@ -1,4 +1,4 @@
-(Bannière) Se loger (Nastanitve) – Cadeaux (Darila) – Questions fréquentes (Pogosta vrašanja) – bouton RSVP (RSVP)
+(Bannière) Se loger (Nastanitve) – Cadeaux (Darila) – Questions fréquentes (Pogosta vrašanja) – bouton Confirmer sa présence (Confirmer sa présence)
 
 (Page d’accueil)
 (slide 1)
@@ -33,7 +33,7 @@ Se loger près de l’abbaye (Nastanitve v bližini opatije s sobote na nedeljo)
 
 (slide 5)
 Nous avons hâte de vous recevoir ! (Veseliva se vašega prihoda)
-(bouton) RSVP (RSVP)
+(bouton) Confirmer sa présence (Confirmer sa présence)
 
 
 
@@ -140,9 +140,9 @@ Beaucoup d’entre vous viennent de loin pour assister à notre mariage. Votre p
 
 
 
-(Page 4 : RSVP (formulaire))
+(Page 4 : Confirmer sa présence (formulaire))
 
-RSVP
+Confirmer sa présence
 Veuillez répondre par le biais de ce formulaire. (Potrdite svojo udeležbo preko spodnjega obrazca.)
 
 Prénom : (Priimek:)

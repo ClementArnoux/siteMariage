@@ -12,15 +12,13 @@
     "ceremony": {
       "title": "Messe",
       "time": "14 heures",
-      "location": "Église Saint-Étienne du Mont",
-      "address": "Place Sainte-Geneviève<br>75005 Paris, France",
+      "address": "Église Saint-Étienne du Mont<br>Place Sainte-Geneviève.<br>75005 Paris, France",
       "map": "Plan"
     },
     "reception": {
       "title": "Cocktail et dîner",
       "time": "À partir de 17 heures",
-      "location": "Abbaye de Cercanceaux",
-      "address": "Rue Antoine Héroët<br>77460 Souppes-sur-Loing, France",
+      "address": "Abbaye de Cercanceaux<br>Rue Antoine Héroët<br>77460 Souppes-sur-Loing, France",
       "map": "Plan",
       "transport": {
         "car": "Voiture : une heure de trajet par l'A6 et l'A77 depuis Paris",
@@ -33,7 +31,7 @@
     },
     "closing": {
       "title": "Nous avons hâte de vous recevoir !",
-      "button": "RSVP"
+      "button": "Confirmer sa présence"
     }
   },
   "accommodation": {
@@ -63,7 +61,7 @@
     "coming_soon": "Contenu à venir..."
   },
   "rsvp": {
-    "title": "RSVP",
+    "title": "Confirmer sa présence",
     "subtitle": "Veuillez répondre par le biais de ce formulaire.",
     "fields": {
       "firstName": "Prénom :",
@@ -85,7 +83,7 @@
     },
     "submit": "Répondre",
     "sending": "Envoi en cours...",
-    "success": "Merci pour votre réponse ! Nous avons bien reçu votre RSVP",
+    "success": "Merci pour votre réponse ! Nous avons bien reçu votre Confirmer sa présence",
     "error": "Erreur lors de l'envoi. Veuillez réessayer."
   },
   "common": {
@@ -103,9 +101,9 @@
     "developer": "Clément A"
   },
   "email_confirmation": {
-    "subject": "Confirmation RSVP - Paula et Pierre",
+    "subject": "Confirmation Confirmer sa présence - Paula et Pierre",
     "greeting": "MERCI {{name}} !",
-    "received": "Votre RSVP a été reçu avec joie",
+    "received": "Votre Confirmer sa présence a été reçu avec joie",
     "attending_ceremony": "Nous vous attendons à la messe !",
     "attending_reception": "Nous vous attendons à la fête !",
     "excited": "Nous avons hâte de célébrer avec vous !",

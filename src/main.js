@@ -221,7 +221,7 @@ async function generateConfirmationEmail(formData, language) {
   };
 }
 
-// Gestion des formulaires RSVP
+// Gestion des formulaires Confirmer sa présence
 async function handleRSVPForm(event) {
   event.preventDefault();
   
@@ -256,7 +256,7 @@ async function handleRSVPForm(event) {
     if (!response.ok) throw new Error('Erreur réseau');
     
     // Succès
-    alert(t('rsvp.success') || 'Merci ! Votre RSVP a été envoyé.');
+    alert(t('rsvp.success') || 'Merci ! Votre Confirmer sa présence a été envoyé.');
     form.reset();
     
   } catch (error) {
@@ -373,7 +373,7 @@ document.addEventListener('DOMContentLoaded', async () => {
   // Ajouter l'interactivité
   addInteractivity();
   
-  // Gérer les formulaires RSVP
+  // Gérer les formulaires Confirmer sa présence
   const rsvpForms = document.querySelectorAll('.rsvp__form');
   rsvpForms.forEach(form => {
     form.addEventListener('submit', handleRSVPForm);

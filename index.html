@@ -65,6 +65,7 @@
     <!-- Events Section -->
     <section class="events">
         <article class="event event--ceremony">
+          <h2 class="event__title" data-i18n="home.ceremony.title">Messe</h2>
           <div class="event__image">
               <img src="/messe.png" alt="Messe" aspect-ratio="1124/1536">
           </div>
@@ -73,8 +74,8 @@
             <div class="event__time" data-i18n="home.ceremony.time">14 heures</div>
             
             <div class="event__location">
-              <h3 class="event__location-name" data-i18n="home.ceremony.location">Église Saint-Étienne du Mont</h3>
               <address class="event__address" data-i18n-html="home.ceremony.address">
+                Église Saint-Étienne du Mont<br>
                 Place Sainte-Geneviève<br>
                 75005 Paris, France
               </address>
@@ -90,8 +91,8 @@
             <div class="event__time" data-i18n="home.reception.time">À partir de 17 heures</div>
             
             <div class="event__location">
-              <h3 class="event__location-name" data-i18n="home.reception.location">Abbaye de Cercanceaux</h3>
               <address class="event__address" data-i18n-html="home.reception.address">
+                Abbaye de Cercanceaux<br>
                 Rue Antoine Héroët<br>
                 77460 Souppes-sur-Loing, France
               </address>
@@ -113,6 +114,7 @@
           <div class="event__image">
             <img src="/lieu.jpeg" alt="Reception" aspect-ratio="540/716">
           </div>
+          <h2 class="event__title" data-i18n="home.reception.title">Cocktail et dîner</h2>
         </article>
     </section>
 
@@ -126,11 +128,20 @@
       <a href="/accommodation" class="action-button" data-i18n="home.accommodation_cta.button">Les lieux</a>
     </section>
 
-    <!-- RSVP Section -->
+    <section class="gifts">
+      <div class="accommodation-divider">
+        <hr>
+        <h2 data-i18n="home.accommodation_cta.title">Se loger près de l'abbaye</h2>
+        <hr>
+      </div>
+      <a href="/accommodation" class="action-button" data-i18n="home.accommodation_cta.button">Les lieux</a>
+    </section>
+
+    <!-- Confirmer sa présence Section -->
     <section class="rsvp-section">
       <div class="content">
         <h2 data-i18n="home.closing.title">Nous avons hâte de vous recevoir !</h2>
-        <a href="/rsvp" class="action-button" data-i18n="home.closing.button">RSVP</a>
+        <a href="/rsvp" class="action-button" data-i18n="home.closing.button">Confirmer sa présence</a>
       </div>
     </section>
   </main>

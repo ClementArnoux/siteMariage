@@ -81,7 +81,7 @@ export default ({ mode }) => {
             /event__address/,
             /event__map-link/,
             /event__transport/,
-            // RSVP and accommodation sections
+            // Confirmer sa présence and accommodation sections
             /\.rsvp-section/,
             /\.accommodation-section/,
             /@font-face/,
