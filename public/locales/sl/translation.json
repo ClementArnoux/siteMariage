@@ -36,7 +36,8 @@
     },
     "closing": {
       "title": "Veseliva se vaše družbe na ta za naju tako poseben dan!",
-      "button": "Potrditi udeležbo"
+      "button": "Potrdi udeležbo",
+      "gifts_button": "Povezava na \"nabirko\""
     }
   },
   "accommodation": {
@@ -58,8 +59,7 @@
     "title": "Darila",
     "message": "Ker boste mnogi izmed vas prišli od daleč, nama že vaša prisotnost izredno veliko pomeni. V kolikor boste vseeno želeli prispevati za najino poročno potovanje, bo na dan poroke možno oddati dar, na voljo pa je tudi spletni \"pujsek\" na sledeči povezavi:",
     "button": "Prispevaj za poročno potovanje",
-    "link": "https://www.papayoux.com/rn/cagnotte/poro-no-potovanje-voyage-de-noces-paula-pierre",
-    "anonymous": "Vaš dar je anonimen."
+    "link": "https://www.papayoux.com/rn/cagnotte/poro-no-potovanje-voyage-de-noces-paula-pierre"
   },
   "faq": {
     "title": "Pogosta vprašanja",
@@ -106,7 +106,7 @@
     "paula": "Paula",
     "pierre": "Pierre",
     "website_by": "Spletno stran je naredil",
-    "developer": "Claude (Anthropic)"
+    "developer": "Clément A"
   },
   "email_confirmation": {
     "subject": "Potrditev udeležbe - Paula in Pierre",

@@ -159,9 +159,13 @@
     text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   }
   
-  .action-button {
+  .action-button:nth-of-type(1) {
     background: white;
     color: black;
+  }
+
+  .action-button:nth-of-type(2) {
+    display: none;
   }
 }
 
@@ -175,7 +179,7 @@
   
   h2 {
     font-size: 45px;
-    font-weight: 400;
+    font-weight: 500;
     margin-bottom: 32px;
     color: black;
     letter-spacing: -0.3px;
@@ -235,6 +239,10 @@
     gap: 0;
     text-align: center;
     margin: 0 auto;
+
+    > .event__title {
+      display: block;
+    }
 
 
     &--reception {
@@ -297,6 +305,10 @@
     h2 {
       font-size: 30px;
     }
+    
+    .action-button:nth-of-type(2) {
+      display: block;
+    }
   }
   
   .accommodation-section {
@@ -317,4 +329,5 @@
       font-size: 32px;
     }
   }
+
 }
