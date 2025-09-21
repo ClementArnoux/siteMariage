@@ -457,9 +457,11 @@ body {
     }
     
     &__guest-count {
-      flex-direction: column;
-      align-items: flex-start;
       gap: 16px;
+
+      select {
+        min-width: 60px;
+      }
     }
   }
   
